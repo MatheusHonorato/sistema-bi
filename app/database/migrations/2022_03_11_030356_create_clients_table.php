@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('bairro');
             $table->string('cep');
             $table->string('flag_type');
-            $table->string('data_nascimento');
+            $table->date('data_nascimento');
             $table->string('estado_civil');
             $table->string('cbo');
             $table->string('renda');

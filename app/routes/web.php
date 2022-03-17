@@ -1,20 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\States;
-use App\Http\Livewire\Cities;
 use App\Http\Livewire\Clients;
-use App\Http\Livewire\Phones;
+use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Phone;
 
-Route::get('states', States::class)->middleware('auth');
-Route::get('cities', Cities::class)->middleware('auth');
-Route::get('clients', Clients::class)->middleware('auth');
-Route::get('phones', Phones::class)->middleware('auth');
+Route::get('clients', Clients::class)->name('clients')->middleware('auth');
+
+Route::get('phones/{id}', Phone::class)->name('phones.show')->middleware('auth');
+
+Route::get('dashboard', Dashboard::class)->name('dashboard')->middleware('auth');
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard');*/

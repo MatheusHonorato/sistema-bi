@@ -7,7 +7,7 @@ use App\Models\State;
 
 use Livewire\WithPagination;
 
-class States extends Component
+class Example extends Component
 {
     use WithPagination;
 

@@ -24,4 +24,9 @@ class Client extends Model
         'renda',
         'titulo_eleitor'
     ];
+
+    public function city() {
+
+        return $this->belongsTo(City::class);
+    }
 }
