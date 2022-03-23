@@ -15,7 +15,7 @@
       <table class="table-fixed w-full">
                 <thead>
                     <tr class="bg-gray-100">
-                        <th class="px-4 py-2 w-20">Tipo</th>
+                        <th class="px-4 py-2">Tipo</th>
                         <th class="px-4 py-2 w-20">DDD</th>
                         <th class="px-4 py-2">Telefone</th>
                     </tr>
@@ -23,7 +23,37 @@
                 <tbody>
                     @foreach($phones as $phone)
                     <tr>
-                        <td class="border px-4 py-2">{{ $phone->phone_type }}</td>
+                        <td class="border px-4 py-2">
+                            @switch($phone->phone_type)
+                                @case(1)
+                                    TELEFONE RESIDENCIAL
+                                    @break
+                                @case(2)
+                                    TELEFONE COMERCIAL
+                                    @break
+                                @case(3)
+                                    TELEFONE MÓVEL
+                                    @break
+                                @case(4)
+                                    TELEFONE MÓVEL
+                                    @break
+                                @case(5)
+                                    TELEFONE PÚBLICO
+                                    @break
+                                @case(6)
+                                    HOUSE HOLD-FAMILIA
+                                    @break
+                                @case(7)
+                                    HOUSE HOLD-ENDEREÇO
+                                    @break
+                                @case(8)
+                                    TELEFONE MÓVEL COML
+                                    @break
+                                @case(9)
+                                    TELEFONE PARENTES
+                                    @break
+                            @endswitch
+                        </td>
                         <td class="border px-4 py-2">({{ $phone->ddd }})</td>
                         <td class="border px-4 py-2">{{ substr($phone->phone, 0, 5) }} - {{ substr($phone->phone, 5, 9) }}</td>
                     </tr>

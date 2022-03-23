@@ -8,17 +8,24 @@ use App\Models\State;
 use Asantibanez\LivewireCharts\Models\ColumnChartModel;
 use Asantibanez\LivewireCharts\Models\PieChartModel;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Dashboard extends Component
 {
+    use WithPagination;
 
-    public $state_id = 0, $city_id = 0, $states, $cities, $age, $amount, $from, $to, $male, $female, $not_info;
-    public $filter_30_39, $filter_40_49, $filter_50_59, $filter_60_69, $filter_mais_70;
+    public $states = [], $cities = [], $bairros = [], $age, $amount, $from, $to, $male, $female, $not_info;
+    public $filter_30_39, $filter_40_49, $filter_50_59, $filter_60_69, $filter_mais_70, $states_teste, $cities_teste, $bairros_teste, $viewTable =  'hidden', $viewChart = '';
 
     protected $listeners = [
         'Dashboard',
         'onColumnClick' => 'handleOnColumnClick',
         'onSliceClick' => 'handleOnSliceClick',
+    ];
+
+    protected $rules = [
+        'states.*' => '',
+        'cities.*' => '',
     ];
 
     public function handleOnColumnClick($point)
@@ -45,25 +52,80 @@ class Dashboard extends Component
                 $this->to = date('1900-12-30');
                 break;
         }
-        $this->male = Client::where('city_id', $this->city_id)->where('flag_type', 'M')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-        $this->female = Client::where('city_id', $this->city_id)->where('flag_type', 'F')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-        $this->not_info = Client::where('city_id', $this->city_id)->where('flag_type', '')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+        /*if(count($this->bairros) == 0) {
+            $this->male = Client::whereIn('city_id', $this->cities)->where('flag_type', 'M')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->female = Client::whereIn('city_id', $this->cities)->where('flag_type', 'F')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->not_info = Client::whereIn('city_id', $this->cities)->where('flag_type', '')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+        } else {
+            $this->male = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'M')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->female = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'F')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+        }*/
+
     }
 
-    public function handleOnSliceClick($slice)
+    public function handleOnSliceClick()
     {
-        dd($slice);
+        $this->isOpen = true;
+    }
+
+    public function viewClientes()
+    {
+        if($this->viewTable == '')
+            $this->viewTable = 'hidden';
+        else
+        $this->viewTable = '';
+
+        if($this->viewChart == '')
+            $this->viewChart = 'hidden';
+        else
+        $this->viewChart = '';
+    }
+
+    public function updatedStates()
+    {
+        if(!is_array($this->states)) return;
+        $this->states = array_filter($this->states,
+            function($states) {
+                return $states != false;
+            });
+    }
+
+    public function updatedCities()
+    {
+        if(!is_array($this->cities)) return;
+        $this->cities = array_filter($this->cities,
+            function($cities) {
+                return $cities != false;
+            });
+    }
+
+    public function updatedBairros()
+    {
+        if(!is_array($this->bairros)) return;
+        $this->bairros = array_filter($this->bairros,
+            function($bairros) {
+                return $bairros != false;
+            });
     }
 
     public function mount()
     {
-        $this->states = State::all();
-        $this->amount = Client::count();
+        $this->states_teste = State::all();
 
-        $this->male = Client::where('city_id', $this->city_id)->where('flag_type', 'M')->count();
-        $this->female = Client::where('city_id', $this->city_id)->where('flag_type', 'F')->count();
-        $this->not_info = Client::where('city_id', $this->city_id)->where('flag_type', '')->count();
+        //$this->amount = Client::count();
 
+        /*if(count($this->bairros) == 0) {
+            $this->male = Client::whereIn('city_id', $this->cities)->where('flag_type', 'M')->count();
+            $this->female = Client::whereIn('city_id', $this->cities)->where('flag_type', 'F')->count();
+            $this->not_info = Client::whereIn('city_id', $this->cities)->where('flag_type', '')->count();
+        } else {
+            $this->male = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'M')->count();
+            $this->female = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'F')->count();
+            $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->count();
+        }*/
+
+        $this->bairros_teste = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities)->get()->toArray(), 'bairro'));
     }
     /**
      * The attributes that are mass assignable.
@@ -72,32 +134,67 @@ class Dashboard extends Component
      */
     public function render()
     {
-        $this->cities = City::where('state_id', $this->state_id)->get();
-
+        $this->cities_teste = City::whereIn('state_id', $this->states)->get();
         $this->from = date('1983-01-01');
         $this->to = date('1992-12-30');
 
-        $this->filter_30_39 = Client::where('city_id', $this->city_id)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+        if(count($this->bairros) == 0) {
+            $this->male = Client::whereIn('city_id', $this->cities)->where('flag_type', 'M')->count();
+            $this->female = Client::whereIn('city_id', $this->cities)->where('flag_type', 'F')->count();
+            $this->not_info = Client::whereIn('city_id', $this->cities)->where('flag_type', '')->count();
+        } else {
+            $this->male = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'M')->count();
+            $this->female = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'F')->count();
+            $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->count();
+        }
 
-        $this->from = date('1973-01-01');
-        $this->to = date('1982-12-30');
+        if(count($this->bairros) == 0) {
+            $this->filter_30_39 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
 
-        $this->filter_40_49 = Client::where('city_id', $this->city_id)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->from = date('1973-01-01');
+            $this->to = date('1982-12-30');
 
-        $this->from = date('1963-01-01');
-        $this->to = date('1972-12-30');
+            $this->filter_40_49 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
 
-        $this->filter_50_59 = Client::where('city_id', $this->city_id)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->from = date('1963-01-01');
+            $this->to = date('1972-12-30');
 
-        $this->from = date('1953-01-01');
-        $this->to = date('1962-12-30');
+            $this->filter_50_59 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
 
-        $this->filter_60_69 = Client::where('city_id', $this->city_id)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->from = date('1953-01-01');
+            $this->to = date('1962-12-30');
 
-        $this->from = date('1943-01-01');
-        $this->to = date('1900-12-30');
+            $this->filter_60_69 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
 
-        $this->filter_mais_70 = Client::where('city_id', $this->city_id)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+            $this->from = date('1943-01-01');
+            $this->to = date('1900-12-30');
+
+            $this->filter_mais_70 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+        } else {
+            $this->filter_30_39 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+
+            $this->from = date('1973-01-01');
+            $this->to = date('1982-12-30');
+
+            $this->filter_40_49 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+
+            $this->from = date('1963-01-01');
+            $this->to = date('1972-12-30');
+
+            $this->filter_50_59 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+
+            $this->from = date('1953-01-01');
+            $this->to = date('1962-12-30');
+
+            $this->filter_60_69 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+
+            $this->from = date('1943-01-01');
+            $this->to = date('1900-12-30');
+
+            $this->filter_mais_70 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+        }
+
+        $this->bairros_teste = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities)->get()->toArray(), 'bairro'));
 
         $columnChartModel =
         (new ColumnChartModel())
@@ -117,7 +214,10 @@ class Dashboard extends Component
             ->addSlice('Não Informado', $this->filter_50_59, '#596023')
             ->withOnSliceClickEvent('onSliceClick');
 
-        return view('livewire.dashboard')->with([
+
+        return view('livewire.dashboard', [
+            'clients' => Client::whereIn('city_id', $this->cities)->paginate(150),
+        ])->with([
             'columnChartModel' => $columnChartModel,
             'pieChartModel' => $pieChartModel
         ]);

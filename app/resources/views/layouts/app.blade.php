@@ -18,6 +18,10 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.0/dist/flowbite.min.css" />
+        <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

@@ -11,14 +11,12 @@ class Clients extends Component
     use WithPagination;
 
     public $search = '';
-    public $isOpen = 0;
+    public $cities_id;
 
-    protected $listeners = ['closeModal'];
+    protected $listeners = ['refreshClients' => 'refreshClients'];
 
-
-    public function updatingSearch()
-    {
-        $this->resetPage();
+    public function refreshClients($cities_id) {
+        $this->cities_id = $cities_id;
     }
 
     /**
@@ -29,7 +27,7 @@ class Clients extends Component
     public function render()
     {
         return view('livewire.clients.index', [
-            'clients' => Client::where('name', 'like', '%'.$this->search.'%')->paginate(50),
+            'clients' => Client::where('name', 'like', '%'.$this->search.'%')->where('city_id', $this->cities_id)->paginate(150),
         ]);
     }
 }
