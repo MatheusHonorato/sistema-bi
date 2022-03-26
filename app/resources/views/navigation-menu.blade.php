@@ -100,9 +100,6 @@
                                 {{ __('Perfil') }}
                             </x-jet-dropdown-link>
 
-                            <x-jet-dropdown-link href="{{ route('clients') }}">
-                                {{ __('Clientes') }}
-                            </x-jet-dropdown-link>
                             <x-jet-dropdown-link>
                                 {{ __('Quem somos') }}
                             </x-jet-dropdown-link>

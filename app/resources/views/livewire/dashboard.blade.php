@@ -18,7 +18,7 @@
                                 <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                                     @foreach($states_teste as $state)
-                                        <li class="flex flex-row justify-between">
+                                        <li class="flex flex-row justify-between px-1">
                                             @if(isset($state))
                                             <label>{{ $state->name }}</label>
                                             <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  wire:model="states.{{ $state->id }}" value="{{ $state->id }}">
@@ -33,8 +33,8 @@
                                 <!-- Dropdown menu -->
                                 <div id="city" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                                    @foreach($cities_teste as $city)
-                                        <li class="flex flex-row justify-between">
+                                    @foreach($cities_options as $city)
+                                        <li class="flex flex-row justify-between px-1">
                                             @if(isset($city))
                                             <label>{{ $city->name }}</label>
                                             <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  wire:model="cities.{{ $city->id }}" value="{{ $city->id }}">
@@ -50,8 +50,8 @@
                                 <!-- Dropdown menu -->
                                 <div id="bairros" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                                    @foreach($bairros_teste as $bairro)
-                                    <li class="flex flex-row justify-between">
+                                    @foreach($bairros_options as $bairro)
+                                    <li class="flex flex-row justify-between px-1">
                                         @if(isset($bairro))
                                         <label>{{ $bairro }}</label>
                                         <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  wire:model="bairros.{{ $bairro }}" value="{{ $bairro }}">
@@ -61,6 +61,41 @@
                                     </ul>
                                 </div>
                             </div>
+
+                            <div class="text-2xl">
+                                <button id="dropdownGenders" data-dropdown-toggle="genders" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Gênero<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                                <!-- Dropdown menu -->
+                                <div id="genders" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                    @foreach($genders_options as $gender => $name)
+                                    <li class="flex flex-row justify-between px-1">
+                                        @if(isset($gender))
+                                        <label>{{ $name }}</label>
+                                        <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  wire:model="genders.{{ $gender }}" value="{{ $gender }}">
+                                        @endif
+                                    </li>
+                                    @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="text-2xl">
+                                <button id="dropdownYearsOld" data-dropdown-toggle="years_olds" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Idade<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                                <!-- Dropdown menu -->
+                                <div id="years_olds" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                    @foreach($years_olds_options as $key => $value)
+                                    <li class="flex flex-row justify-between px-1">
+                                        @if(isset($value))
+                                        <label>{{ $key }}</label>
+                                        <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  wire:model="years_olds.{{ $key }}" value="{{ $key }}">
+                                        @endif
+                                    </li>
+                                    @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+
                             <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" wire:click="viewClientes">Clientes</button>
 
                         </div>
@@ -90,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 {!! $viewTable !!}">
+                <div class="max-w-7xl mx-auto {!! $viewTable !!}">
                     <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
                         @if (session()->has('message'))
                             <div class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3" role="alert">
