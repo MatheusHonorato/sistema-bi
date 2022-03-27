@@ -142,6 +142,7 @@
                                 <tr class="bg-gray-100">
                                     <th class="px-4 py-2 w-20">Id.</th>
                                     <th class="px-4 py-2" sortable direction="asc">Nome</th>
+                                    <th class="px-4 py-2">Idade</th>
                                     <th class="px-4 py-2">Telefone</th>
                                     <th class="px-4 py-2">Rua</th>
                                     <th class="px-4 py-2">Bairro</th>
@@ -155,6 +156,19 @@
                                 <tr class="border">
                                     <td class="border px-4 py-2">{{ $client->id }}</td>
                                     <td class="border px-4 py-2">{{ $client->name }}</td>
+
+
+                                    @php
+
+                                    $dateDifference = abs(strtotime(date("Y-m-d")) - strtotime($client->data_nascimento));
+
+                                    $years  = floor($dateDifference / (365 * 60 * 60 * 24));
+
+                                    @endphp
+
+                                    <td class="border px-4 py-2">{{ $years }}</td>
+
+
                                     <td class="px-4 py-2 flex justify-center">
                                         <a href="{{ route('phones.show', $client->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Visualizar</a>
                                     </td>

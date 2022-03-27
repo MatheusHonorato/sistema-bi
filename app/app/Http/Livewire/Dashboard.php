@@ -27,42 +27,11 @@ class Dashboard extends Component
 
     public $froms = [], $tos = [];
 
-    protected $listeners = [
-        'Dashboard',
-        'onColumnClick' => 'handleOnColumnClick',
-        'onSliceClick' => 'handleOnSliceClick',
-    ];
-
     protected $rules = [
         'states.*' => '',
         'cities.*' => '',
     ];
 
-    /*public function handleOnColumnClick($point)
-    {
-        switch ($point['title']) {
-            case '30 a 39 anos':
-                $this->from = date('1983-01-01');
-                $this->to = date('1992-12-30');
-                break;
-            case '40 a 49 anos':
-                $this->from = date('1973-01-01');
-                $this->to = date('1982-12-30');
-                break;
-            case '50 a 59 anos':
-                $this->from = date('1963-01-01');
-                $this->to = date('1972-12-30');
-                break;
-            case '60 a 69 anos':
-                $this->from = date('1953-01-01');
-                $this->to = date('1942-12-30');
-                break;
-            case 'Mais de 70 anos':
-                $this->from = date('1943-01-01');
-                $this->to = date('1900-12-30');
-                break;
-        }
-    }*/
 
     public function viewClientes()
     {
@@ -122,7 +91,12 @@ class Dashboard extends Component
             });
     }
 
-    public function mount()
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    public function render()
     {
         $this->states_teste = State::all();
         $this->from = date('1900-12-30');
@@ -132,27 +106,12 @@ class Dashboard extends Component
         $this->female = 0;
         $this->not_info = 0;
 
-        //$this->amount = Client::count();
+        $this->filter_30_39 = 0;
+        $this->filter_40_49 = 0;
+        $this->filter_50_59 = 0;
+        $this->filter_60_69 = 0;
+        $this->filter_mais_70 = 0;
 
-        /*if(count($this->bairros) == 0) {
-            $this->male = Client::whereIn('city_id', $this->cities)->where('flag_type', 'M')->count();
-            $this->female = Client::whereIn('city_id', $this->cities)->where('flag_type', 'F')->count();
-            $this->not_info = Client::whereIn('city_id', $this->cities)->where('flag_type', '')->count();
-        } else {
-            $this->male = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'M')->count();
-            $this->female = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'F')->count();
-            $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->count();
-        }*/
-
-        //$this->bairros_teste = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities)->get()->toArray(), 'bairro'));
-    }
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    public function render()
-    {
         $this->froms = [];
         foreach ($this->years_olds as $value) {
             if(count($this->years_olds) > 0)
@@ -180,7 +139,6 @@ class Dashboard extends Component
 
         //
 
-
         $this->cities_options = City::whereIn('state_id', $this->states)->get();
 
         if(count($this->states) > 0 && count($this->cities) == 0)
@@ -192,63 +150,6 @@ class Dashboard extends Component
         if(count($this->cities) > 0)
             $this->bairros_options = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities_render)->get()->toArray(), 'bairro'));
 
-        /*if(count($this->bairros) == 0) {
-            $this->male = Client::whereIn('city_id', $this->cities)->where('flag_type', 'M')->count();
-            $this->female = Client::whereIn('city_id', $this->cities)->where('flag_type', 'F')->count();
-            $this->not_info = Client::whereIn('city_id', $this->cities)->where('flag_type', '')->count();
-        } else {
-            $this->male = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'M')->count();
-            $this->female = Client::whereIn('bairro', $this->bairros)->where('flag_type', 'F')->count();
-            $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->count();
-        }
-
-        if(count($this->bairros) == 0) {
-            $this->filter_30_39 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1973-01-01');
-            $this->to = date('1982-12-30');
-
-            $this->filter_40_49 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1963-01-01');
-            $this->to = date('1972-12-30');
-
-            $this->filter_50_59 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1953-01-01');
-            $this->to = date('1962-12-30');
-
-            $this->filter_60_69 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1943-01-01');
-            $this->to = date('1900-12-30');
-
-            $this->filter_mais_70 = Client::whereIn('city_id', $this->cities)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-        } else {
-            $this->filter_30_39 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1973-01-01');
-            $this->to = date('1982-12-30');
-
-            $this->filter_40_49 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1963-01-01');
-            $this->to = date('1972-12-30');
-
-            $this->filter_50_59 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1953-01-01');
-            $this->to = date('1962-12-30');
-
-            $this->filter_60_69 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-
-            $this->from = date('1943-01-01');
-            $this->to = date('1900-12-30');
-
-            $this->filter_mais_70 = Client::whereIn('bairro', $this->bairros)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
-        }*/
-
-        //$this->bairros_teste = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities)->get()->toArray(), 'bairro'));
 
         $clients_paginate = null;
 
@@ -258,8 +159,43 @@ class Dashboard extends Component
 
         count($this->genders) == 0 ? $this->genders_render = ['M', 'F', ''] : $this->genders_render = $this->genders;
 
+
         if(count($this->bairros) == 0) {
             $clients_paginate = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
+
+            if(count($this->years_olds) == 0) {
+                $this->filter_30_39 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1983-01-01', '1992-12-30'])->count();
+
+
+                $this->filter_40_49 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1973-01-01', '1982-12-30'])->count();
+
+
+                $this->filter_50_59 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1963-01-01', '1972-12-30'])->count();
+
+
+                $this->filter_60_69 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1942-12-30', '1953-01-01'])->count();
+
+
+                $this->filter_mais_70 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1900-12-30', '1943-01-01'])->count();
+
+            } else  {
+                if(array_search('30 a 39 anos', $this->years_olds))
+                    $this->filter_30_39 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1983-01-01', '1992-12-30'])->count();
+
+                if(array_search('40 a 49 anos', $this->years_olds))
+                    $this->filter_40_49 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1973-01-01', '1982-12-30'])->count();
+
+                if(array_search('50 a 59 anos', $this->years_olds))
+                    $this->filter_50_59 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1963-01-01', '1972-12-30'])->count();
+
+                if(array_search('60 a 69 anos', $this->years_olds))
+                    $this->filter_60_69 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1942-12-30', '1953-01-01'])->count();
+
+                if(array_search('Mais de 70 anos', $this->years_olds))
+                    $this->filter_mais_70 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1900-12-30', '1943-01-01'])->count();
+
+            }
+
 
             foreach ($this->genders_render as $value) {
                 if($value == 'M')
@@ -272,6 +208,39 @@ class Dashboard extends Component
         }
         else {
             $clients_paginate = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
+
+            if(count($this->years_olds) == 0) {
+                $this->filter_30_39 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1983-01-01', '1992-12-30'])->count();
+
+
+                $this->filter_40_49 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1973-01-01', '1982-12-30'])->count();
+
+
+                $this->filter_50_59 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1963-01-01', '1972-12-30'])->count();
+
+
+                $this->filter_60_69 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1942-12-30', '1953-01-01'])->count();
+
+
+                $this->filter_mais_70 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1900-12-30', '1943-01-01'])->count();
+
+            } else  {
+                if(array_search('30 a 39 anos', $this->years_olds))
+                    $this->filter_30_39 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1983-01-01', '1992-12-30'])->count();
+
+                if(array_search('40 a 49 anos', $this->years_olds))
+                    $this->filter_40_49 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1973-01-01', '1982-12-30'])->count();
+
+                if(array_search('50 a 59 anos', $this->years_olds))
+                    $this->filter_50_59 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1963-01-01', '1972-12-30'])->count();
+
+                if(array_search('60 a 69 anos', $this->years_olds))
+                    $this->filter_60_69 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1942-12-30', '1953-01-01'])->count();
+
+                if(array_search('Mais de 70 anos', $this->years_olds))
+                    $this->filter_mais_70 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1900-12-30', '1943-01-01'])->count();
+
+            }
 
             foreach ($this->genders_render as $value) {
                 if($value == 'M')
