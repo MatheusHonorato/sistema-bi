@@ -9,6 +9,7 @@ use Asantibanez\LivewireCharts\Models\ColumnChartModel;
 use Asantibanez\LivewireCharts\Models\PieChartModel;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Http;
 
 class Dashboard extends Component
 {
@@ -26,12 +27,12 @@ class Dashboard extends Component
     ];
 
     public $froms = [], $tos = [];
+    public $response_api = [], $longs = [], $lats = [], $state_api = [], $cities_api = [];
 
     protected $rules = [
         'states.*' => '',
         'cities.*' => '',
     ];
-
 
     public function viewClientes()
     {
@@ -62,6 +63,16 @@ class Dashboard extends Component
             function($cities) {
                 return $cities != false;
             });
+
+        $this->cities_api = array_column(City::whereIn('id', $this->cities)->get()->ToArray(), 'name');
+
+        if(count($this->cities_api)>0) {
+            foreach ($this->cities_api as $name_city_api) {
+                $result_api = Http::get("https://nominatim.openstreetmap.org/search/{$name_city_api}-BR?format=json&addressdetails=1&limit=1&polygon_svg=1")->json($key = null);
+                array_push($this->response_api, array('lon' => $result_api[0]['lon'], 'lat' => $result_api[0]['lat']));
+            }
+            $this->emit('updatePoints', $this->response_api);
+        }
     }
 
     public function updatedBairros()
@@ -98,6 +109,7 @@ class Dashboard extends Component
      */
     public function render()
     {
+
         $this->states_teste = State::all();
         $this->from = date('1900-12-30');
         $this->to = date('1992-12-30');
@@ -251,6 +263,8 @@ class Dashboard extends Component
                     $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name')->count();
             }
         }
+        //$this->response_api[0]['lat'];
+
 
         $columnChartModel =
         (new ColumnChartModel())

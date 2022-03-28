@@ -22,6 +22,14 @@
         <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.0/dist/flowbite.min.css" />
         <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 
+        <link
+        rel="stylesheet"
+        media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css"
+        id="cm-theme"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js"></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -48,5 +56,104 @@
 
         @livewireScripts
         @livewireChartsScripts
+
+        <script>
+
+        Livewire.on("updatePoints", (coord) => {
+            document.getElementById("map").innerText = "";
+
+            var collection = [];
+            var places = [];
+
+            coord.forEach(element_atual => {
+
+                collection.push(new ol.Feature({
+                    geometry: new ol.geom.Point(
+                        ol.proj.fromLonLat([parseFloat(element_atual['lon']), parseFloat(element_atual['lat'])])
+                    ),
+                }));
+
+                places.push([
+                    parseFloat(element_atual['lon']),
+                    parseFloat(element_atual['lat']),
+                    "http://maps.google.com/mapfiles/ms/micons/blue.png",
+                ]);
+
+            });
+
+            var vectorSource = new ol.source.Vector({
+                features: collection,
+            });
+
+            var features = [];
+            for (var i = 0; i < places.length; i++) {
+
+                var iconFeature = new ol.Feature({
+                    geometry: new ol.geom.Point(
+                    ol.proj.transform(
+                        [places[i][0], places[i][1]],
+                        "EPSG:4326",
+                        "EPSG:3857"
+                    )
+                    ),
+                });
+
+                var iconStyle = new ol.style.Style({
+                    image: new ol.style.Icon({
+                    src: places[i][2],
+                    color: places[i][3],
+                    crossOrigin: "anonymous",
+                    }),
+                });
+                iconFeature.setStyle(iconStyle);
+                vectorSource.addFeature(iconFeature);
+            }
+
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                updateWhileAnimating: true,
+                updateWhileInteracting: true,
+            });
+
+            var Foco = ol.proj.fromLonLat([parseFloat(coord[0]['lon']), parseFloat(coord[0]['lat'])]);
+
+            var view = new ol.View({
+                center: Foco,
+                zoom: 6, // 5
+            });
+
+            var map = new ol.Map({
+                target: "map",
+                view: view,
+                layers: [
+                    new ol.layer.Tile({
+                    preload: 3,
+                    source: new ol.source.OSM(),
+                    }),
+                    vectorLayer,
+                ],
+                loadTilesWhileAnimating: true,
+            });
+
+        });
+        </script>
+
+        <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        </style>
+        <script>
+
+        </script>
     </body>
 </html>
