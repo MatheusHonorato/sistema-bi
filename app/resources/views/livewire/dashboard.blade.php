@@ -104,7 +104,7 @@
 
                     <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 {!! $viewChart !!} flex items-center justify-center">
 
-                            <div>
+                            <div class="{{ count($states) == 0 ? 'hidden' : '' }}">
                                 <div style="height: 15rem;">
                                     <livewire:livewire-column-chart
                                         key="{{ $columnChartModel->reactiveKey() }}"
