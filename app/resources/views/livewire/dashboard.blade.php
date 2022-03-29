@@ -10,7 +10,7 @@
                                 Dashboard dados cadastrais
                             </div>
                             <div>
-                                {{ $amount }}
+                                Total: {{ $amount }}
                             </div>
                             <div class="text-2xl">
                                 <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Estados<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
@@ -33,6 +33,12 @@
                                 <!-- Dropdown menu -->
                                 <div id="city" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                        <li class="flex flex-row justify-between px-1">
+                                            @if(isset($cities_options))
+                                            <label>Selecionar todas</label>
+                                            <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  wire:model="cities_all">
+                                            @endif
+                                        </li>
                                     @foreach($cities_options as $city)
                                         <li class="flex flex-row justify-between px-1">
                                             @if(isset($city))
@@ -96,7 +102,7 @@
                                 </div>
                             </div>
 
-                            <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" wire:click="viewClientes">Clientes</button>
+                            <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Exportar</button>
 
                         </div>
 
@@ -143,9 +149,9 @@
                                 <tr class="bg-gray-100">
                                     <th class="px-4 py-2 w-20">Id.</th>
                                     <th class="px-4 py-2" sortable direction="asc">Nome</th>
-                                    <th class="px-4 py-2">Idade</th>
                                     <th class="px-4 py-2">Telefone</th>
                                     <th class="px-4 py-2">Rua</th>
+                                    <th class="px-4 py-2">Número</th>
                                     <th class="px-4 py-2">Bairro</th>
                                     <th class="px-4 py-2">Cidade</th>
                                     <th class="px-4 py-2 w-20">UF</th>
@@ -157,23 +163,11 @@
                                 <tr class="border">
                                     <td class="border px-4 py-2">{{ $client->id }}</td>
                                     <td class="border px-4 py-2">{{ $client->name }}</td>
-
-
-                                    @php
-
-                                    $dateDifference = abs(strtotime(date("Y-m-d")) - strtotime($client->data_nascimento));
-
-                                    $years  = floor($dateDifference / (365 * 60 * 60 * 24));
-
-                                    @endphp
-
-                                    <td class="border px-4 py-2">{{ $years }}</td>
-
-
                                     <td class="px-4 py-2 flex justify-center">
                                         <a href="{{ route('phones.show', $client->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Visualizar</a>
                                     </td>
                                     <td class="border px-4 py-2">{{ $client->street }}</td>
+                                    <td class="border px-4 py-2">{{ $client->number }}</td>
                                     <td class="border px-4 py-2">{{ $client->bairro }}</td>
                                     <td class="border px-4 py-2">{{ $client->city->name }}</td>
                                     <td class="border px-4 py-2">{{ $client->city->state->name }}</td>

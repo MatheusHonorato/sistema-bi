@@ -12,8 +12,17 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="true">
                         {{ __('Dashboard') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="">
+                        {{ __('Quem somos') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="">
+                        {{ __('Comprar') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="">
+                        {{ __('Contato') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -98,13 +107,6 @@
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Perfil') }}
-                            </x-jet-dropdown-link>
-
-                            <x-jet-dropdown-link>
-                                {{ __('Quem somos') }}
-                            </x-jet-dropdown-link>
-                            <x-jet-dropdown-link>
-                                {{ __('Comprar') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

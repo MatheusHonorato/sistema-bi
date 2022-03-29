@@ -16,7 +16,7 @@ class Dashboard extends Component
     use WithPagination;
 
     public $states = [], $cities = [], $bairros = [], $age, $amount, $from, $to, $male, $female, $not_info;
-    public $filter_30_39, $filter_40_49, $filter_50_59, $filter_60_69, $filter_mais_70, $states_teste, $cities_options, $bairros_options = [], $viewTable =  'hidden', $viewChart = '';
+    public $filter_30_39, $filter_40_49, $filter_50_59, $filter_60_69, $filter_mais_70, $states_teste, $cities_options = [], $bairros_options = [], $viewTable =  'hidden', $viewChart = '';
     public $cities_render = [], $genders = [], $genders_render = [], $genders_options = ['M' => 'Masculino', 'F' => 'Feminino', '' => 'Empresa'];
     public $years_olds = [], $years_olds_options = [
         '30 a 39 anos' => ['from' => '1983-01-01', 'to' => '1992-12-30'],
@@ -29,10 +29,15 @@ class Dashboard extends Component
     public $froms = [], $tos = [];
     public $response_api = [], $longs = [], $lats = [], $state_api = [], $cities_api = [];
 
+    public $cities_all = true;
+
     protected $rules = [
         'states.*' => '',
         'cities.*' => '',
     ];
+
+    protected $listeners = ['viewClientes'];
+
 
     public function viewClientes()
     {
@@ -110,7 +115,7 @@ class Dashboard extends Component
     public function render()
     {
 
-        $this->states_teste = State::all();
+        $this->states_teste = State::orderBy('name')->get();
         $this->from = date('1900-12-30');
         $this->to = date('1992-12-30');
 
@@ -148,10 +153,9 @@ class Dashboard extends Component
         if(count($this->tos) == 0)
             $this->to = date('1992-12-30');
 
-
         //
 
-        $this->cities_options = City::whereIn('state_id', $this->states)->get();
+        $this->cities_options = City::whereIn('state_id', $this->states)->orderBy('name')->get();
 
         if(count($this->states) > 0 && count($this->cities) == 0)
             $this->cities_render = array_column(City::whereIn('state_id', $this->states)->get()->toArray(), 'id');
@@ -160,7 +164,7 @@ class Dashboard extends Component
             $this->cities_render = $this->cities;
 
         if(count($this->cities) > 0)
-            $this->bairros_options = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities_render)->get()->toArray(), 'bairro'));
+            $this->bairros_options = array_unique(array_column(Client::select('bairro')->whereIn('city_id', $this->cities_render)->orderBy('bairro')->get()->toArray(), 'bairro'));
 
 
         $clients_paginate = null;
@@ -174,6 +178,8 @@ class Dashboard extends Component
 
         if(count($this->bairros) == 0) {
             $clients_paginate = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
+
+            $this->amount = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
 
             if(count($this->years_olds) == 0) {
                 $this->filter_30_39 = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1983-01-01', '1992-12-30'])->count();
@@ -221,6 +227,8 @@ class Dashboard extends Component
         else {
             $clients_paginate = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
 
+            $this->amount = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->count();
+
             if(count($this->years_olds) == 0) {
                 $this->filter_30_39 = Client::whereIn('bairro', $this->bairros)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', ['1983-01-01', '1992-12-30'])->count();
 
@@ -263,8 +271,6 @@ class Dashboard extends Component
                     $this->not_info = Client::whereIn('bairro', $this->bairros)->where('flag_type', '')->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name')->count();
             }
         }
-        //$this->response_api[0]['lat'];
-
 
         $columnChartModel =
         (new ColumnChartModel())
