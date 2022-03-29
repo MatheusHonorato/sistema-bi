@@ -12,16 +12,23 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="true">
+                    @if(request()->routeIs('dashboard'))
+                    <x-jet-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="">
+                    @endif
+                    @if(!request()->routeIs('dashboard'))
+                    <x-jet-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-jet-nav-link>
+                    @endif
+                    <x-jet-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
                         {{ __('Quem somos') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="">
+                    <x-jet-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
                         {{ __('Comprar') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="">
+                    <x-jet-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
                         {{ __('Contato') }}
                     </x-jet-nav-link>
                 </div>
