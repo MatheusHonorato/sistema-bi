@@ -107,7 +107,7 @@
 
                                 <div id="export" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                                        <li class="flex flex-row justify-between px-1 cursor-pointer">Telefone</li>
+                                        <li class="flex flex-row justify-between px-1 cursor-pointer" wire:click="downloadPhone">Telefone</li>
                                         <li class="flex flex-row justify-between px-1 cursor-pointer">SMS</li>
                                         <li class="flex flex-row justify-between px-1 cursor-pointer">Mala direta</li>
                                     </ul>

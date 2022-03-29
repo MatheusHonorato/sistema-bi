@@ -2,14 +2,17 @@
 
 namespace App\Http\Livewire;
 
+use App\Exports\ClientExport;
 use App\Models\City;
 use App\Models\Client;
 use App\Models\State;
+use App\Models\User;
 use Asantibanez\LivewireCharts\Models\ColumnChartModel;
 use Asantibanez\LivewireCharts\Models\PieChartModel;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Http;
+use Maatwebsite\Excel\Facades\Excel;
 
 class Dashboard extends Component
 {
@@ -107,6 +110,12 @@ class Dashboard extends Component
             });
     }
 
+    public function downloadPhone()
+    {
+        return Excel::download(new ClientExport($this->cities_render, $this->genders_render, $this->from, $this->to), 'teste.xlsx');
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -174,7 +183,6 @@ class Dashboard extends Component
         $this->not_info = 0;
 
         count($this->genders) == 0 ? $this->genders_render = ['M', 'F', ''] : $this->genders_render = $this->genders;
-
 
         if(count($this->bairros) == 0) {
             $clients_paginate = Client::whereIn('city_id', $this->cities_render)->whereIn('flag_type', $this->genders_render)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');

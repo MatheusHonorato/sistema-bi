@@ -15,7 +15,6 @@ Route::view('/quem-somos', 'quem-somos')->name('quem-somos')->middleware('auth')
 Route::view('/comprar', 'comprar')->name('comprar')->middleware('auth');
 Route::view('/contato', 'contato')->name('contato')->middleware('auth');
 
-
 Route::get('/', function () {
     return redirect('/login');
 });
