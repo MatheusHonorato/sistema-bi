@@ -29,7 +29,7 @@
         id="cm-theme"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js"></script>
-
+        <script src="https://kit.fontawesome.com/2ce8604ad9.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />

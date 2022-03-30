@@ -6,7 +6,6 @@ use App\Exports\ClientExport;
 use App\Models\City;
 use App\Models\Client;
 use App\Models\State;
-use App\Models\User;
 use Asantibanez\LivewireCharts\Models\ColumnChartModel;
 use Asantibanez\LivewireCharts\Models\PieChartModel;
 use Livewire\Component;
@@ -112,7 +111,10 @@ class Dashboard extends Component
 
     public function downloadPhone()
     {
-        return Excel::download(new ClientExport($this->cities_render, $this->genders_render, $this->from, $this->to), 'teste.xlsx');
+        $datetime = date('Y-m-d H:i:s');
+        if(count($this->bairros) == 0)
+            return Excel::download(new ClientExport('city', $this->cities_render, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+        return Excel::download(new ClientExport('bairro', $this->bairros, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
     }
 
 
@@ -288,6 +290,7 @@ class Dashboard extends Component
             ->addColumn('50 a 59 anos', $this->filter_50_59, '#35A0FF')
             ->addColumn('60 a 69 anos', $this->filter_60_69, '#35A0FF')
             ->addColumn('Mais de 70 anos', $this->filter_mais_70, '#35A0FF')
+            ->withoutLegend()
             ->withOnColumnClickEventName('onColumnClick');
 
         $pieChartModel =

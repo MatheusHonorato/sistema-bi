@@ -10,11 +10,12 @@ class ClientExport implements FromQuery
 {
     use Exportable;
 
-    public $cities = [], $genders = [], $from, $to;
+    public $flag, $cities_or_bairros = [], $genders = [], $from, $to;
 
-    public function __construct($cities, $genders, $from, $to)
+    public function __construct($flag, $cities_or_bairros, $genders, $from, $to)
     {
-        $this->cities = $cities;
+        $this->flag = $flag;
+        $this->cities_or_bairros = $cities_or_bairros;
         $this->genders = $genders;
         $this->from = $from;
         $this->to = $to;
@@ -22,6 +23,8 @@ class ClientExport implements FromQuery
 
     public function query()
     {
-        return Client::query()->where('city_id', $this->cities)->whereIn('flag_type', $this->genders)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
+        if($this->flag == 'city')
+            return Client::query()->select('name')->where('city_id', $this->cities_or_bairros)->whereIn('flag_type', $this->genders)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
+        return Client::query()->select('name')->whereIn('bairro', $this->cities_or_bairros)->whereIn('flag_type', $this->genders)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name');
     }
 }

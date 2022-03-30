@@ -23,13 +23,16 @@
                     </x-jet-nav-link>
                     @endif
                     <x-jet-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
-                        {{ __('Quem somos') }}
+                        <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
+                        <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
-                        {{ __('Comprar') }}
+                        <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Comprar') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
-                        {{ __('Contato') }}
+                        <i class="fa-solid fa-envelope mr-2"></i> {{ __('Contato') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -96,6 +99,7 @@
                             @else
                                 <span class="inline-flex rounded-md">
                                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                        <i class="fa-solid fa-user mr-2"></i>
                                         {{ Auth::user()->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -113,7 +117,7 @@
                             </div>
 
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Perfil') }}
+                            <i class="fa-solid fa-address-card mr-2"></i> {{ __('Perfil') }}
                             </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -130,7 +134,7 @@
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
                                          @click.prevent="$root.submit();">
-                                    {{ __('Sair') }}
+                                         <i class="fa-solid fa-right-from-bracket mr-2"></i> {{ __('Sair') }}
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>
