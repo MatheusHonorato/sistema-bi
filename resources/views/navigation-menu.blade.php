@@ -37,6 +37,7 @@
                 </div>
             </div>
 
+            @if(Auth::check())
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
@@ -141,6 +142,7 @@
                     </x-jet-dropdown>
                 </div>
             </div>
+            @endif
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
@@ -154,6 +156,7 @@
         </div>
     </div>
 
+    @if(Auth::check())
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
@@ -232,4 +235,5 @@
             </div>
         </div>
     </div>
+    @endif
 </nav>
