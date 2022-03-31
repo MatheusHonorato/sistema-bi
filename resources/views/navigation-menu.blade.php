@@ -215,7 +215,7 @@
                         {{ __('Team Settings') }}
                     </x-jet-responsive-nav-link>
 
-                    @can('create', Laravel\Jetstream\Jetstream::newTeamMode@if(Auth::check())l())
+                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
                         <x-jet-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
                             {{ __('Create New Team') }}
                         </x-jet-responsive-nav-link>
