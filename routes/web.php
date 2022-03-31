@@ -19,7 +19,6 @@ Route::view('/nossos-servicos', 'nossos-servicos')->name('nossos-servicos')->mid
 Route::get('/', function () {
     return redirect('/login');
 });
-
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');*/
