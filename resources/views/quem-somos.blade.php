@@ -1,6 +1,6 @@
 <x-app-layout>
 <div class="container max-w-xl mx-auto flex items-start">
-    <div class="px-10">
+    <div class="px-10 md:px-0">
         <h1 class="mb-10 mt-10">Quem Somos</h1>
 
         <p class="mb-5">A Rebrax Assessoria atua na prestação de serviços técnicos especializados nas
