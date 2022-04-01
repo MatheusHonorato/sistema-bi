@@ -156,15 +156,34 @@
         </div>
     </div>
 
-    @if(Auth::check())
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+            @if(request()->routeIs('dashboard'))
+            <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-jet-responsive-nav-link>
+            @endif
+            @if(!request()->routeIs('dashboard'))
+            <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                {{ __('Dashboard') }}
+            </x-jet-responsive-nav-link>
+            @endif
+            <x-jet-responsive-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
+                <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
+                <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
+                <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Comprar') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
+                <i class="fa-solid fa-envelope mr-2"></i> {{ __('Contato') }}
             </x-jet-responsive-nav-link>
         </div>
 
+        @if(Auth::check())
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
@@ -234,6 +253,6 @@
                 @endif
             </div>
         </div>
+        @endif
     </div>
-    @endif
 </nav>
