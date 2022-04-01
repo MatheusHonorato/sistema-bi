@@ -1,6 +1,6 @@
 <x-app-layout>
 <div class="container max-w-xl mx-auto flex items-start">
-    <div>
+    <div class="px-10">
         <h1 class="mb-10 mt-10">Nossos Serviços</h1>
 
         <p class="mb-5">Nosso principal objetivo tem sido desenvolver e implementar soluções que possibilitem aos
