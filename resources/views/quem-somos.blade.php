@@ -3,18 +3,18 @@
     <div class="px-10 md:px-0">
         <h1 class="mb-10 mt-10">Quem Somos</h1>
 
-        <p class="mb-5">A Rebrax Assessoria atua na prestação de serviços técnicos especializados nas
+        <p class="mb-5 text-justify">A Rebrax Assessoria atua na prestação de serviços técnicos especializados nas
         áreas de Administração de Empresas, Contábil, Engenharia de Dados, Business
         Intelligence, Pesquisas e Engenharia de Telecomunicações.</p>
 
-        <p class="mb-5">Através da competência de seus profissionais e dos seus parceiros terceirizados, a
+        <p class="mb-5 text-justify">Através da competência de seus profissionais e dos seus parceiros terceirizados, a
         Rebrax Assessoria desenvolve projetos e modelos de negócios próprios ou para
         seus clientes, tanto no setor público, quanto no setor privado e caracteriza-se pela
         inovação, segurança e qualidade dos serviços prestados.</p>
 
-        <p class="mb-5">Entre em contato conosco e solicite um orçamento sem compromisso.</p>
+        <p class="mb-5 text-justify">Entre em contato conosco e solicite um orçamento sem compromisso.</p>
 
-        <p>Atuamos em todo o território nacional.</p>
+        <p class="text-justify">Atuamos em todo o território nacional.</p>
     </div>
 </div>
 </x-app-layout>
