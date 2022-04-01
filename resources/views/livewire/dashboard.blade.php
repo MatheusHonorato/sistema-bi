@@ -3,13 +3,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <div class="bg-white overflow-hidden shadow-xl">
+                <div class="bg-white overflow-hidden">
                     <div class="sm:px-10 py-2 bg-white border-b border-gray-200 columns-1 sm:columns-8">
                         <div class="w-full">
                             <div class="w-full flex items-center">
-                                Dashboard dados cadastrais
+                                Simulação
                             </div>
-                            <div class="w-full mr-2">
+                            <div class="w-full mr-2 font-medium">
                                 Total: {{ $amount }}
                             </div>
                         </div>
@@ -131,6 +131,9 @@
 
                             <div>
                                 <livewire:map/>
+                                @if(count($cities) > 0)
+                                    <p class="text-right pr-1 pt-2">Para limpar as coordenadas do mapa clique <a href="" class="font-bold">aqui.</a></p>
+                                @endif
                             </div>
 
                     </div>
@@ -186,5 +189,8 @@
 
             </div>
         </div>
+    </div>
+    <div class="text-center">
+        <p class="text-red-600">A Rebrax Assessoria realiza suas atividades de tabulação de dados em conformidade com a LGPD - Lei Geral de Proteção de Dados.<br>Todos os dados aqui apresentados são meramente ilustrativos.</p>
     </div>
 </div>

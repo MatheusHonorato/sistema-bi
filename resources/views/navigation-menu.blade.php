@@ -14,12 +14,12 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if(request()->routeIs('dashboard'))
                     <x-jet-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Simulação - Dados Tabulados') }}
                     </x-jet-nav-link>
                     @endif
                     @if(!request()->routeIs('dashboard'))
                     <x-jet-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Simulação - Dados Tabulados') }}
                     </x-jet-nav-link>
                     @endif
                     <x-jet-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
@@ -29,7 +29,7 @@
                         <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
-                        <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Comprar') }}
+                        <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Pagamento Online') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
                         <i class="fa-solid fa-envelope mr-2"></i> {{ __('Contato') }}
@@ -161,12 +161,12 @@
         <div class="pt-2 pb-3 space-y-1">
             @if(request()->routeIs('dashboard'))
             <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Simulação - Dados Tabulados') }}
             </x-jet-responsive-nav-link>
             @endif
             @if(!request()->routeIs('dashboard'))
             <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Simulação - Dados Tabulados') }}
             </x-jet-responsive-nav-link>
             @endif
             <x-jet-responsive-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
