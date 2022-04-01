@@ -148,7 +148,7 @@
                             </div>
                         @endif
 
-                        <table class="table-fixed w-full">
+                        <table class="table-auto">
                             <thead>
                                 <tr class="bg-gray-100">
                                     <th class="px-4 py-2 w-20">Id.</th>
