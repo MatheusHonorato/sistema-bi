@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Exports\ClientExport;
+use App\Exports\MalaDiretaExport;
+use App\Exports\PhoneExport;
 use App\Models\City;
 use App\Models\Client;
 use App\Models\State;
@@ -113,8 +115,16 @@ class Dashboard extends Component
     {
         $datetime = date('Y-m-d H:i:s');
         if(count($this->bairros) == 0)
-            return Excel::download(new ClientExport('city', $this->cities_render, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
-        return Excel::download(new ClientExport('bairro', $this->bairros, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+            return Excel::download(new PhoneExport('city', $this->cities_render, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+        return Excel::download(new PhoneExport('bairro', $this->bairros, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+    }
+
+    public function downloadMalaDireta()
+    {
+        $datetime = date('Y-m-d H:i:s');
+        if(count($this->bairros) == 0)
+            return Excel::download(new MalaDiretaExport('city', $this->cities_render, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+        return Excel::download(new MalaDiretaExport('bairro', $this->bairros, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
     }
 
 
@@ -127,6 +137,8 @@ class Dashboard extends Component
     {
 
         $this->states_teste = State::orderBy('name')->get();
+
+
         $this->from = date('1900-12-30');
         $this->to = date('1992-12-30');
 

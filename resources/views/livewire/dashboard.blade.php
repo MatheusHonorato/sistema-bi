@@ -103,7 +103,7 @@
                                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                                     <li class="flex flex-row justify-between px-1 cursor-pointer hover:bg-blue-700 hover:text-white" wire:click="downloadPhone">Telefone</li>
                                     <li class="flex flex-row justify-between px-1 cursor-pointer hover:bg-blue-700 hover:text-white">SMS</li>
-                                    <li class="flex flex-row justify-between px-1 cursor-pointer hover:bg-blue-700 hover:text-white">Mala direta</li>
+                                    <li class="flex flex-row justify-between px-1 cursor-pointer hover:bg-blue-700 hover:text-white" wire:click="downloadMalaDireta">Mala direta</li>
                                 </ul>
                             </div>
                         </div>

@@ -6,7 +6,7 @@ use App\Models\Client;
 use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\Exportable;
 
-class ClientExport implements FromQuery
+class PhoneExport implements FromQuery
 {
     use Exportable;
 
