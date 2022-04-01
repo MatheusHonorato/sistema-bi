@@ -22,7 +22,7 @@
             </li>
             <li>
                 <p class="mb-5 text-justify">
-                    <span class="font-medium">Tratamento de Dados</span>: Os dados cadastrais da maioria das organizações e das
+                    <span class="font-medium">Tabulação de Dados</span>: Os dados cadastrais da maioria das organizações e das
                     pessoas, via de regra, estão dispersos em “ilhas de dados”, ou melhor, os dados
                     cadastrais dos seus clientes e/ou dos seus principais contatos estão
                     separados/dispersos na lista de contatos dos sistemas informatizados, nos celulares,
@@ -86,7 +86,7 @@
                     Com a atual dinâmica social, econômica, financeira, cultural e política de nossos dias, onde as mudanças são constantes e permeiam todas as nossas atividades, o gestor, tanto do setor público, quanto da iniciativa privada, que frequentemente tomam decisões importantes, mais do que nunca precisam de informações atualizadas para balizar seus planos e fundamentar os seus projetos e diretrizes.
                 </p>
                 <p class="mb-5 text-justify">
-                    Por isto, antes de planejar, faça um levantamento detalhado, com informações atualizadas e confiáveis.
+                    Por isso, antes de planejar, faça um levantamento detalhado, com informações atualizadas e confiáveis.
                     <br/>Solicite hoje mesmo um orçamento sem compromisso na <span class="font-medium">Rebrax Assessoria</span>.
                 </p>
                 <p class="mb-5 text-justify">
@@ -95,7 +95,7 @@
             </li>
             <li>
                 <p class="mb-5 text-justify">
-                    <span class="font-medium">Infraestrutura de Rede de Dados Municipal</span>:
+                    <span class="font-medium">Modelo de Infraestrutura Municipal de Rede de Dados - Protocolo REDEOK:</span>:
                 </p>
                 <p class="mb-5 text-justify">
                     Em 2015, na Assembleia Geral da ONU, o Brasil foi signatário da Agenda 2030, ou seja, comprometeu-se a criar mecanismos para que as cidades brasileiras e assentamentos humanos sejam “inclusivos, seguros, resilientes e sustentáveis” (objetivo 11 da Agenda 2030 – que definem o atual modelo de Cidades Inteligentes).
@@ -104,7 +104,7 @@
                     Alinhada com os princípios e diretrizes que norteiam o conceito de <span class="underline">Cidades Inteligentes</span>, a <span class="font-medium">Rebrax Assessoria</span> em parceria com a <span class="font-medium">WSAT – Infraestrutura de Rede</span>, entraram com <span class="underline">um Pedido de Patente no INPI</span> para o registro do “Modelo de Infraestrutura Municipal de Rede de Dados – <span class="font-medium">Protocolo REDEOK</span>” (de autoria e desenvolvimento de ambos), um ano após o lançamento da <span class="underline">Carta Brasileira para Cidades Inteligentes</span>, (Dezembro de 2020) por iniciativa da Coordenação-Geral de Apoio à Gestão Regional e Urbana da SMDRU/MDR onde estão expressos o conceito de “Cidades Inteligentes” para o Brasil e <span class="underline">uma agenda para a transformação digital das cidades brasileiras na perspectiva do desenvolvimento urbano sustentável</span>.
                 </p>
                 <p class="mb-5 text-justify">
-                    O <span class="font-medium">Protocolo REDEOK</span> é caracterizado por uma pesquisa e coleta prévia de dados diversos do município, afim de produzir um laudo/diagnóstico, com vistas à elaboração de um Plano diretor para estruturação e implementação de uma infraestrutura outdoor de rede básica modular (rede híbrida de dados) na esfera pública municipal, de modo que seja estabelecida uma sequência de procedimentos padrões customizados, que servirão de roteiro para a implementação, expansão e manutenção da rede de dados municipal, bem como, para a realização de eventos destinados à promoção de sua sustentabilidade econômico-financeira.
+                    Devido a isso, o <span class="font-medium">Protocolo REDEOK</span> é caracterizado por uma pesquisa e coleta prévia de dados diversos do município, afim de produzir um laudo/diagnóstico, com vistas à elaboração de um Plano diretor para estruturação e implementação de uma infraestrutura outdoor de rede básica modular (rede híbrida de dados) na esfera pública municipal, de modo que seja estabelecida uma sequência de procedimentos padrões customizados, que servirão de roteiro para a implementação, expansão e manutenção da rede de dados municipal, bem como, para a realização de eventos destinados à promoção de sua sustentabilidade econômico-financeira.
                 </p>
                 <p class="mb-5 text-justify">
                     Cabe evidenciar que a Carta Brasileira para Cidades Inteligentes está apoiada em 08 (oito) objetivos estratégicos, estando o <span class="font-medium">Protocolo REDEOK</span> alinhado com o <span class="underline">Objetivo Estratégico 4: “Adotar modelos inovadores e inclusivos de governança urbana e fortalecer o papel do poder público como gestor de impactos da transformação digital nas cidades”</span>.
@@ -113,7 +113,7 @@
                     O <span class="font-medium">Protocolo REDEOK</span>, no texto da Patente Requerida junto ao INPI, também preconiza um conjunto de antenas para formação de uma rede outdoor de forma modular e escalável. A replicação deste <span class="underline">Modulo Básico de Telecomunicações</span> estabelece uma infraestrutura robusta, com capacidade de cobrir todo o território do município com um mesmo padrão de conectividade. Ao elevar o nível de planejamento de políticas públicas a um novo patamar, a rede outdoor municipal fomenta o delineamento horizontal destas.
                 </p>
                 <p class="mb-5 text-justify">
-                    Se você é um gestor público ou é ligado a atual administração municipal da sua cidade, <span class="underline">mantenha contato conosco para mais informações</span> e veja como o seu município pode ser inserido no contexto de Cidades Inteligentes.
+                    Se você é um gestor público ou está ligado a atual administração municipal da sua cidade, <span class="underline">mantenha contato conosco para mais informações</span> e veja como implantar o <span class="font-medium">Modelo de Infraestrutura Municipal de Rede de Dados - Protocolo REDEOK no seu município.</span>.
                 </p>
             </li>
         </ol>
