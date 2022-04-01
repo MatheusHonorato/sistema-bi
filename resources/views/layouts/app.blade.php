@@ -119,7 +119,7 @@
 
             var view = new ol.View({
                 center: Foco,
-                zoom: 6, // 5
+                zoom: 4, // 5
             });
 
             var map = new ol.Map({
