@@ -291,6 +291,7 @@ class Dashboard extends Component
             ->addColumn('60 a 69 anos', $this->filter_60_69, '#35A0FF')
             ->addColumn('Mais de 70 anos', $this->filter_mais_70, '#35A0FF')
             ->withoutLegend()
+            ->setDataLabelsEnabled(true)
             ->withOnColumnClickEventName('onColumnClick');
 
         $pieChartModel =
@@ -299,6 +300,7 @@ class Dashboard extends Component
             ->addSlice('Masculino', $this->male, '#1B5585')
             ->addSlice('Feminino', $this->female, '#C794C0')
             ->addSlice('Não Informado', $this->not_info, '#596023')
+            ->setDataLabelsEnabled(true)
             ->withOnSliceClickEvent('onSliceClick');
 
         return view('livewire.dashboard', [
