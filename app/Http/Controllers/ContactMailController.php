@@ -20,7 +20,7 @@ class ContactMailController extends Controller
             'body' => 'This is for testing email using smtp.'
         ];
 
-        Mail::to('your_email@gmail.com')->send(new ContactMail($mailData));
+        Mail::to('matheuspaixaohonorato@gmail.com')->send(new ContactMail($mailData));
 
         return redirect('/')->with('success-mail', 'Sua mensagem foi enviada com sucesso!')->with('details', 'Um dos nossos nosso analistas manterá contato.')->with('thanks', 'Agradecemos pela atenção.');
     }
