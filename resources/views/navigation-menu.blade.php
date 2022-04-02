@@ -5,13 +5,19 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('welcome') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
+                        <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
+                        <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
+                    </x-jet-nav-link>
                     @if(request()->routeIs('dashboard'))
                     <x-jet-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
                         {{ __('Simulação - Dados Tabulados') }}
@@ -22,12 +28,6 @@
                         {{ __('Simulação - Dados Tabulados') }}
                     </x-jet-nav-link>
                     @endif
-                    <x-jet-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
-                        <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
-                        <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
-                    </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
                         <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Pagamento Online') }}
                     </x-jet-nav-link>
@@ -159,6 +159,12 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
+                <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
+                <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
+            </x-jet-responsive-nav-link>
             @if(request()->routeIs('dashboard'))
             <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
                 {{ __('Simulação - Dados Tabulados') }}
@@ -169,12 +175,6 @@
                 {{ __('Simulação - Dados Tabulados') }}
             </x-jet-responsive-nav-link>
             @endif
-            <x-jet-responsive-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
-                <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
-                <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
-            </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
                 <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Comprar') }}
             </x-jet-responsive-nav-link>

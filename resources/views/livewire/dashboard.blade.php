@@ -5,6 +5,7 @@
 
                 <div class="bg-white overflow-hidden">
                     <div class="py-2 bg-white border-b border-gray-200 columns-1 sm:columns-8 px-5 md:px-10">
+
                         <div class="w-full text-center sm:text-left">
                             Simulação
                         </div>

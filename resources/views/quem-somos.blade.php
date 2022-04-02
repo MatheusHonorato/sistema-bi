@@ -1,5 +1,19 @@
 <x-app-layout>
-<div class="container max-w-xl mx-auto flex items-start">
+<div class="container max-w-xl mx-auto flex items-start flex flex-col">
+    @if(Session::has('success-mail'))
+
+    <div class="mt-10 w-full bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+        <div class="flex">
+            <div>
+            <p class="font-bold">{{Session::get('success-mail')}}</p>
+            <p class="font-bold">{{Session::get('details')}}</p>
+            <p class="font-bold">{{Session::get('thanks')}}</p>
+            </div>
+        </div>
+    </div>
+
+    @endif
+
     <div class="px-10 md:px-0">
         <h1 class="mb-10 mt-10">Quem Somos</h1>
 

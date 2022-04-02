@@ -32,6 +32,10 @@
         <script src="https://kit.fontawesome.com/2ce8604ad9.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased">
+        <a href="https://api.whatsapp.com/send?phone=553884096996&text=Olá" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -119,7 +123,7 @@
 
             var view = new ol.View({
                 center: Foco,
-                zoom: 5, // 5
+                zoom: 7, // 5
             });
 
             var map = new ol.Map({
@@ -151,9 +155,26 @@
             margin: 0;
             padding: 0;
         }
-        </style>
-        <script>
+        /* button wathsapp */
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+        font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+        z-index:100;
+        }
 
-        </script>
+        .my-float{
+            margin-top:16px;
+        }
+
+        </style>
     </body>
 </html>
