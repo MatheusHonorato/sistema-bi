@@ -175,6 +175,25 @@
             margin-top:16px;
         }
 
+        /* ajuste paleta */
+        .bg-blue-700 {
+            background-color: #2c0f07 !important;
+        }
+
+       .focus\:ring-4:focus {
+            --tw-ring-shadow: rgb(64 6 28 / 45%) !important;
+        }
+
+        .border-indigo-400 {
+            border-color: rgb(64 6 28 / 1) !important;
+        }
+        .bg-indigo-600 {
+            background-color: rgb(64 6 28 / 1) !important;
+        }
+        .hover\:bg-blue-700:hover {
+            background-color: rgb(64 6 28 / 1) !important;
+        }
+
         </style>
     </body>
 </html>
