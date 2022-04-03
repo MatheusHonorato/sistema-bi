@@ -19,7 +19,7 @@
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Identifição</label>
 
-                                <select class="mt-1 form-select appearance-none
+                                <select name="identificacao" class="mt-1 form-select appearance-none
                                     block
                                     w-full
                                     px-3
@@ -33,7 +33,7 @@
                                     transition
                                     ease-in-out
                                     m-0
-                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                                     <option selected disabled hidden></option>
                                     <option value="1">Pessoa física</option>
                                     <option value="2">Pessoa juridica</option>
@@ -47,18 +47,18 @@
 
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">E-mail</label>
-                                <input type="email" name="name" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                <input type="email" name="email" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div>
 
                             <div class="col-span-12 md:col-span-4">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Telefone</label>
-                                <input type="text" name="name" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                <input type="text" name="phone" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div>
 
                             <div class="col-span-12 md:col-span-4">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Estado</label>
 
-                                <select class="mt-1 form-select appearance-none
+                                <select name="state" class="mt-1 form-select appearance-none
                                     block
                                     w-full
                                     px-3
@@ -72,7 +72,7 @@
                                     transition
                                     ease-in-out
                                     m-0
-                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                                     <option selected disabled hidden></option>
                                     <option value="1">Minas Gerais</option>
                                 </select>
@@ -81,7 +81,7 @@
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Cidade</label>
 
-                                <select class="mt-1 form-select appearance-none
+                                <select name="city" class="mt-1 form-select appearance-none
                                     block
                                     w-full
                                     px-3
@@ -95,7 +95,7 @@
                                     transition
                                     ease-in-out
                                     m-0
-                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
                                     <option selected disabled hidden></option>
                                     <option value="1">Montes Claros</option>
                                 </select>
@@ -103,7 +103,7 @@
 
                             <div class="col-span-12">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Descrição</label>
-                                <textarea class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="descricao" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
                     </div>

@@ -16,8 +16,13 @@ class ContactMailController extends Controller
     public function index(Request $request)
     {
         $mailData = [
+            'identificacao' => $request->identificacao,
             'name' => $request->name,
-            'body' => 'This is for testing email using smtp.'
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'state' => $request->state,
+            'city' => $request->city,
+            'descricao' => $request->descricao
         ];
 
         Mail::to('contato@rebrax.com')->send(new ContactMail($mailData));
