@@ -36,6 +36,7 @@
         <link rel="manifest" href="/site.webmanifest">
     </head>
     <body class="font-sans antialiased">
+
         <a href="https://api.whatsapp.com/send?phone=553884096996&text=Olá" class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a>
@@ -321,5 +322,6 @@
                 document.getElementById("state").checked = true;
             }
         </script>
+
     </body>
 </html>
