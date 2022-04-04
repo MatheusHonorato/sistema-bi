@@ -7,7 +7,7 @@ use App\Models\Phone;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\Exportable;
 
-class MalaDiretaExport implements FromCollection
+class SMSExport implements FromCollection
 {
     use Exportable;
 
@@ -50,7 +50,6 @@ class MalaDiretaExport implements FromCollection
 
     public function collection()
     {
-
         if($this->flag == 'city')
             $clients = Client::where('city_id', $this->cities_or_bairros)->whereIn('flag_type', $this->genders)->whereBetween('data_nascimento', [$this->from, $this->to])->orderBy('name')->get();
         else
@@ -60,38 +59,20 @@ class MalaDiretaExport implements FromCollection
         $collection = collect();
 
         foreach ($clients as $client) {
+
             $phone_datas = Phone::where('client_id', $client->id)->first();
 
-            $tratamento = '`A';
+            if($phone_datas->phone_type == 3 || $phone_datas->phone_type == 4) {
 
-            if($client->flag_type == 'M') {
-                $tratamento = 'Sr.';
-            }
-            if($client->flag_type == 'F') {
-                $tratamento = 'Sra.';
+                $collection->push(
+                [
+                    'name' => $client->name,
+                    'phone' => $this->telefone($phone_datas->ddd . $phone_datas->phone)
+                ]);
             }
 
-            $collection->push(
-            [
-                'tratamento' => $tratamento,
-                'name' => $client->name,
-                'name_two' => '',
-                'caixa_postal' => '',
-                'endereco' => $client->number,
-                'number' => $client->street,
-                'complemento' => $client->complemento,
-                'bairro' => $client->bairro,
-                'city' => $client->city->name,
-                'state' => $client->city->state->name,
-                'email' => $client->city->email,
-                'phone' => $this->telefone($phone_datas->ddd . $phone_datas->phone),
-                'fax' => '',
-                'cep_caixa_postal' => '',
-                'cep' => $client->cep
-            ]);
         }
 
         return $collection;
     }
 }
-

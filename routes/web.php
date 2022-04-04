@@ -10,7 +10,7 @@ Route::get('clients', Clients::class)->name('clients');
 
 Route::get('phones/{id}', Phone::class)->name('phones.show');
 
-Route::get('painel', Dashboard::class)->name('dashboard');
+Route::get('tabulacao-de-dados', Dashboard::class)->name('dashboard');
 
 Route::view('/', 'quem-somos')->name('welcome');
 Route::view('/quem-somos', 'quem-somos')->name('quem-somos');

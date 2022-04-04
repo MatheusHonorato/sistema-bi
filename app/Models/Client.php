@@ -11,6 +11,7 @@ class Client extends Model
 
     protected $fillable = [
         'name',
+        'cpf',
         'city_id',
         'street',
         'number',
@@ -22,11 +23,16 @@ class Client extends Model
         'estado_civil',
         'cbo',
         'renda',
-        'titulo_eleitor'
+        'titulo_eleitor',
     ];
 
     public function city() {
 
         return $this->belongsTo(City::class);
+    }
+
+    public function phones() {
+
+        return $this->hasMany(Phone::class);
     }
 }

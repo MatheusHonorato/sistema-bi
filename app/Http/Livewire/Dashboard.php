@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Exports\ClientExport;
 use App\Exports\MalaDiretaExport;
 use App\Exports\PhoneExport;
+use App\Exports\SMSExport;
 use App\Models\City;
 use App\Models\Client;
 use App\Models\State;
@@ -42,6 +43,10 @@ class Dashboard extends Component
 
     protected $listeners = ['viewClientes'];
 
+    public function mount()
+    {
+        $this->states = [2];
+    }
 
     public function viewClientes()
     {
@@ -117,6 +122,14 @@ class Dashboard extends Component
         if(count($this->bairros) == 0)
             return Excel::download(new PhoneExport('city', $this->cities_render, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
         return Excel::download(new PhoneExport('bairro', $this->bairros, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+    }
+
+    public function downloadSMS()
+    {
+        $datetime = date('Y-m-d H:i:s');
+        if(count($this->bairros) == 0)
+            return Excel::download(new SMSExport('city', $this->cities_render, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
+        return Excel::download(new SMSExport('bairro', $this->bairros, $this->genders_render, $this->from, $this->to), "$datetime.xlsx");
     }
 
     public function downloadMalaDireta()
