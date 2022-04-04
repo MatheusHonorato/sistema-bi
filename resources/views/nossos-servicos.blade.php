@@ -62,6 +62,9 @@
                     </li>
                     <li>
                         <p class="mb-5 text-justify">
+                            <span class="font-medium">QRCode Otimizado</span> – Amplie diariamente o seu cadastro de clientes potenciais (Leads) através de “interface direta com os seus clientes ou do seu público alvo”, utilizando o nosso <span class="font-medium">“QRCode Otimizado”</span>, que possibilita a coleta dos dados e a imediata integração na sua base cadastral. Detalhe: o cliente realiza todo o processo pelo “autosserviço” e já “autoriza o envio de novas mensagens”.
+                        </p>
+                        <p class="mb-5 text-justify">
                             O <span class="font-medium">QRCode Otimizado</span> deve ser inserido no seu material impresso – para ser distribuídos nos balcões pelos atendentes ou caixas ou ainda distribuídos nos panfletos, ou enviado através das suas redes sociais.
                         </p>
                     </li>
@@ -72,7 +75,7 @@
                     </li>
                 </ol>
                 <p class="mb-5 text-justify">
-                    <span class="underline">Importante</span>: A <span class="font-medium">Rebrax Assessoria</span> desenvolve os serviços de tratamento de dados em conformidade com a <span class="underline">LGPD – Lei Geral de Proteção de Dados</span>, estando habilitada através de CNAEs próprios, juntamente com o seu corpo técnico, para atuar na execução das atividades acima citadas.
+                    <span class="underline">Importante</span>: A <span class="font-medium">Rebrax Assessoria</span> desenvolve os serviços de tratamento de dados em conformidade com a <span class="underline">LGPD – Lei Geral de Proteção de Dados</span>, estando habilitada para tais atividades através de CNAEs específicos e também pelo seu corpo técnico.
                 </p>
             </li>
             <li>
@@ -104,7 +107,7 @@
                     Alinhada com os princípios e diretrizes que norteiam o conceito de <span class="underline">Cidades Inteligentes</span>, a <span class="font-medium">Rebrax Assessoria</span> em parceria com a <span class="font-medium">WSAT – Infraestrutura de Rede</span>, entraram com <span class="underline">um Pedido de Patente no INPI</span> para o registro do “Modelo de Infraestrutura Municipal de Rede de Dados – <span class="font-medium">Protocolo REDEOK</span>” (de autoria e desenvolvimento de ambos), um ano após o lançamento da <span class="underline">Carta Brasileira para Cidades Inteligentes</span>, (Dezembro de 2020) por iniciativa da Coordenação-Geral de Apoio à Gestão Regional e Urbana da SMDRU/MDR onde estão expressos o conceito de “Cidades Inteligentes” para o Brasil e <span class="underline">uma agenda para a transformação digital das cidades brasileiras na perspectiva do desenvolvimento urbano sustentável</span>.
                 </p>
                 <p class="mb-5 text-justify">
-                    Devido a isso, o <span class="font-medium">Protocolo REDEOK</span> é caracterizado por uma pesquisa e coleta prévia de dados diversos do município, afim de produzir um laudo/diagnóstico, com vistas à elaboração de um Plano diretor para estruturação e implementação de uma infraestrutura outdoor de rede básica modular (rede híbrida de dados) na esfera pública municipal, de modo que seja estabelecida uma sequência de procedimentos padrões customizados, que servirão de roteiro para a implementação, expansão e manutenção da rede de dados municipal, bem como, para a realização de eventos destinados à promoção de sua sustentabilidade econômico-financeira.
+                    Diante do exposto, o <span class="font-medium">Protocolo REDEOK</span> é caracterizado por uma pesquisa e coleta prévia de dados diversos do município, afim de produzir um laudo/diagnóstico, com vistas à elaboração de um Plano diretor para estruturação e implementação de uma infraestrutura outdoor de rede básica modular (rede híbrida de dados) na esfera pública municipal, de modo que seja estabelecida uma sequência de procedimentos padrões customizados, que servirão de roteiro para a implementação, expansão e manutenção da rede de dados municipal, bem como, para a realização de eventos destinados à promoção de sua sustentabilidade econômico-financeira.
                 </p>
                 <p class="mb-5 text-justify">
                     Cabe evidenciar que a Carta Brasileira para Cidades Inteligentes está apoiada em 08 (oito) objetivos estratégicos, estando o <span class="font-medium">Protocolo REDEOK</span> alinhado com o <span class="underline">Objetivo Estratégico 4: “Adotar modelos inovadores e inclusivos de governança urbana e fortalecer o papel do poder público como gestor de impactos da transformação digital nas cidades”</span>.
@@ -113,7 +116,7 @@
                     O <span class="font-medium">Protocolo REDEOK</span>, no texto da Patente Requerida junto ao INPI, também preconiza um conjunto de antenas para formação de uma rede outdoor de forma modular e escalável. A replicação deste <span class="underline">Modulo Básico de Telecomunicações</span> estabelece uma infraestrutura robusta, com capacidade de cobrir todo o território do município com um mesmo padrão de conectividade. Ao elevar o nível de planejamento de políticas públicas a um novo patamar, a rede outdoor municipal fomenta o delineamento horizontal destas.
                 </p>
                 <p class="mb-5 text-justify">
-                    Se você é um gestor público ou está ligado a atual administração municipal da sua cidade, <span class="underline">mantenha contato conosco para mais informações</span> e veja como implantar o <span class="font-medium">Modelo de Infraestrutura Municipal de Rede de Dados - Protocolo REDEOK no seu município.</span>.
+                    Se você é um gestor público ou está ligado a atual administração municipal da sua cidade, <span class="underline">mantenha contato conosco para mais informações</span> e veja como implantar o <span class="font-medium">Modelo de Infraestrutura Municipal de Rede de Dados - Protocolo REDEOK</span> no seu município.
                 </p>
             </li>
         </ol>
