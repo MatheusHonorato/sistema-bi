@@ -66,7 +66,7 @@ class SMSExport implements FromCollection
 
                 $collection->push(
                 [
-                    'name' => $client->name,
+                    'name' => strtok($client->name, " "),
                     'phone' => $this->telefone($phone_datas->ddd . $phone_datas->phone)
                 ]);
             }

@@ -92,9 +92,13 @@ class PhoneExport implements FromCollection
                     break;
                 }
 
+            $name = explode(' ', $client->name, 2);
+
+            $name_two = explode(' ', $name[1], 2);
+
             $collection->push(
             [
-                'name' => $client->name,
+                'name' => $name[0]." ".$name_two[0],
                 'phone' => $this->telefone($phone_datas->ddd . $phone_datas->phone),
                 'tipo' => $phone_type,
                 'city' => $client->city->name,

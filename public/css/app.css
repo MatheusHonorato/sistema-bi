@@ -1389,7 +1389,7 @@ select {
 .border-transparent {
     border-color: transparent;
 }
-.border-indigo-400 {
+.bg-gray-900 {
     --tw-border-opacity: 1;
     border-color: rgb(129 140 248 / var(--tw-border-opacity));
 }

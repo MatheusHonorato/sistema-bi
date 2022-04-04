@@ -293,7 +293,7 @@
         }
 
         /* ajuste paleta */
-        .bg-blue-700 {
+        .bg-gray-900 {
             background-color: #2c0f07 !important;
         }
 
@@ -307,7 +307,7 @@
         .bg-indigo-600 {
             background-color: rgb(64 6 28 / 1) !important;
         }
-        .hover\:bg-blue-700:hover {
+        .hover\:bg-gray-900:hover {
             background-color: rgb(64 6 28 / 1) !important;
         }
 
