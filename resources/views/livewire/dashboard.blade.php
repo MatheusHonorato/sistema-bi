@@ -170,7 +170,48 @@
                                     <td class="border px-4 py-2">{{ $client->id }}</td>
                                     <td class="border px-4 py-2">{{ $client->name }}</td>
                                     <td class="px-4 py-2 flex justify-center">
-                                        <a href="{{ route('phones.show', $client->id) }}" class="bg-blue-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded my-3"><i class="fa-solid fa-eye"></i></a>
+
+                                    <button id="dropdownPhones{{ $client->id }}" data-dropdown-toggle="phones{{ $client->id }}" class="w-full text-white bg-blue-500 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-gray-900 dark:focus:ring-blue-800" type="button"><i class="fa-solid fa-eye"></i><svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+                                    <div id="phones{{ $client->id }}" class="hidden z-10 w-100 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                                        @foreach($client->phones as $phone)
+                                        <li class="flex flex-row justify-between px-1">
+                                            <label>
+                                            @switch($phone->phone_type)
+                                                @case(1)
+                                                    TELEFONE RESIDENCIAL
+                                                    @break
+                                                @case(2)
+                                                    TELEFONE COMERCIAL
+                                                    @break
+                                                @case(3)
+                                                    TELEFONE MÓVEL
+                                                    @break
+                                                @case(4)
+                                                    TELEFONE MÓVEL
+                                                    @break
+                                                @case(5)
+                                                    TELEFONE PÚBLICO
+                                                    @break
+                                                @case(6)
+                                                    HOUSE HOLD-FAMILIA
+                                                    @break
+                                                @case(7)
+                                                    HOUSE HOLD-ENDEREÇO
+                                                    @break
+                                                @case(8)
+                                                    TELEFONE MÓVEL COML
+                                                    @break
+                                                @case(9)
+                                                    TELEFONE PARENTES
+                                                    @break
+                                            @endswitch
+                                            | ({{ $phone->ddd }}) {{ substr($phone->phone, 0, 5) }} - {{ substr($phone->phone, 5, 9) }}</label>
+                                        </li>
+                                        @endforeach
+                                        </ul>
+                                    </div>
                                     </td>
                                     <td class="border px-4 py-2">{{ $client->street }}</td>
                                     <td class="border px-4 py-2">{{ $client->number }}</td>

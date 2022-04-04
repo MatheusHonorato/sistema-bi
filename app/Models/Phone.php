@@ -15,4 +15,9 @@ class Phone extends Model
         'phone',
         'phone_type'
     ];
+
+    public function client() {
+
+        return $this->belongsTo(Phone::class);
+    }
 }
