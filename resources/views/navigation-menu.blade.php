@@ -25,7 +25,7 @@
                                 </x-jet-responsive-nav-link>
                                 @else(!request()->routeIs('dashboard'))
                                 <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                                    {{ __('Alternar - Gráficos | Tabela') }}
+                                    {{ __('Gráficos | Tabela') }}
                                 </x-jet-responsive-nav-link>
                                 @endif
                                 </li>
