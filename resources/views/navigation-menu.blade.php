@@ -23,8 +23,7 @@
                                 <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
                                     {{ __('Alternar - Gráficos | Tabela') }}
                                 </x-jet-responsive-nav-link>
-                                @endif
-                                @if(!request()->routeIs('dashboard'))
+                                @else(!request()->routeIs('dashboard'))
                                 <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                                     {{ __('Alternar - Gráficos | Tabela') }}
                                 </x-jet-responsive-nav-link>
