@@ -19,9 +19,16 @@
                         <div id="dropdowngraficotabela" class=" hidden z-10 w-100 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                             <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownGraficoTabela">
                                 <li class="cursor-pointer flex flex-row justify-between px-1">
-                                    <x-jet-nav-link wire:click="$emit('viewClientes')">
-                                        {{ __('Alternar - Gráficos | Tabela') }}
-                                    </x-jet-nav-link>
+                                @if(request()->routeIs('dashboard'))
+                                <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
+                                    {{ __('Alternar - Gráficos | Tabela') }}
+                                </x-jet-responsive-nav-link>
+                                @endif
+                                @if(!request()->routeIs('dashboard'))
+                                <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                                    {{ __('Alternar - Gráficos | Tabela') }}
+                                </x-jet-responsive-nav-link>
+                                @endif
                                 </li>
                             </ul>
                         </div>
