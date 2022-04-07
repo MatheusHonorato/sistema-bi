@@ -12,29 +12,20 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <!--<x-jet-nav-link href="{{ route('quem-somos') }}" :active="request()->routeIs('quem-somos')">
-                        <i class="fa-solid fa-people-group mr-2"></i> {{ __('Quem somos') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
-                        <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
-                    </x-jet-nav-link>-->
-                    @if(request()->routeIs('dashboard'))
-                    <x-jet-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
-                        {{ __('Simulação - Dados Tabulados') }}
-                    </x-jet-nav-link>
-                    @endif
-                    @if(!request()->routeIs('dashboard'))
-                    <x-jet-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Simulação - Dados Tabulados') }}
-                    </x-jet-nav-link>
-                    @endif
-                    <!--
-                    <x-jet-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
-                        <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Pagamento Online') }}
-                    </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
-                        <i class="fa-solid fa-envelope mr-2"></i> {{ __('Contato') }}
-                    </x-jet-nav-link>-->
+
+                    <button id="dropdownGraficoTabela" onclick="check()" data-dropdown-toggle="dropdowngraficotabela" class="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-400 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition cursor-pointer" :active="request()->routeIs('dashboard')" type="button"></i>Simulação - Dados Tabulados <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+                    <div class="text-2xl mt-3 text-center">
+                        <div id="dropdowngraficotabela" class=" hidden z-10 w-100 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownGraficoTabela">
+                                <li class="cursor-pointer flex flex-row justify-between px-1">
+                                    <x-jet-nav-link wire:click="$emit('viewClientes')">
+                                        {{ __('Alternar - Gráficos | Tabela') }}
+                                    </x-jet-nav-link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -168,12 +159,12 @@
             </x-jet-responsive-nav-link>-->
             @if(request()->routeIs('dashboard'))
             <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
-                {{ __('Simulação - Dados Tabulados') }}
+                {{ __('Alternar - Gráficos | Tabela') }}
             </x-jet-responsive-nav-link>
             @endif
             @if(!request()->routeIs('dashboard'))
             <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Simulação - Dados Tabulados') }}
+                {{ __('Alternar - Gráficos | Tabela') }}
             </x-jet-responsive-nav-link>
             @endif
             <!--

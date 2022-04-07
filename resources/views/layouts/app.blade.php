@@ -43,7 +43,7 @@
 
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100 pb-10">
+        <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -59,6 +59,10 @@
             <main>
                 {{ $slot }}
             </main>
+        </div>
+
+        <div class="text-center bg-gray-100 pb-5 pt-5">
+            <p class="text-red-600">A Rebrax Assessoria realiza suas atividades de tabulação de dados em conformidade com a LGPD - Lei Geral de Proteção de Dados.<br>Todos os dados aqui apresentados são meramente ilustrativos.</p>
         </div>
 
         <footer class="text-center bg-gray-900 text-white">
@@ -314,6 +318,11 @@
 
         .bg-gray-900 {
             background-color: #2c0f07 !important;
+        }
+
+        .text-indigo-700, .bg-indigo-50 {
+            color: black;
+            background-color: transparent !important;
         }
 
         </style>

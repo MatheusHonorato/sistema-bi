@@ -1,5 +1,5 @@
 <div>
-    <div class="py-4">
+    <div class="pt-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
@@ -229,8 +229,5 @@
 
             </div>
         </div>
-    </div>
-    <div class="text-center">
-        <p class="text-red-600">A Rebrax Assessoria realiza suas atividades de tabulação de dados em conformidade com a LGPD - Lei Geral de Proteção de Dados.<br>Todos os dados aqui apresentados são meramente ilustrativos.</p>
     </div>
 </div>
