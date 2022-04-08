@@ -298,9 +298,6 @@
         }
 
         /* ajuste paleta */
-        .bg-gray-900 {
-            background-color: #2c0f07 !important;
-        }
 
        .focus\:ring-4:focus {
             --tw-ring-shadow: rgb(64 6 28 / 45%) !important;
@@ -312,11 +309,11 @@
         .bg-indigo-600 {
             background-color: rgb(64 6 28 / 1) !important;
         }
-        .hover\:bg-gray-900:hover {
+        .hover\:bg-amber-900:hover {
             background-color: rgb(64 6 28 / 1) !important;
         }
 
-        .bg-gray-900 {
+        .bg-amber-900 {
             background-color: #2c0f07 !important;
         }
 
