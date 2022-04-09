@@ -65,7 +65,7 @@
             <p class="text-red-600">A Rebrax Assessoria realiza suas atividades de tabulação de dados em conformidade com a LGPD - Lei Geral de Proteção de Dados.<br>Todos os dados aqui apresentados são meramente ilustrativos.</p>
         </div>
 
-        <footer class="text-center bg-gray-900 text-white">
+        <footer class="text-center bg-amber-900 text-white">
             <div class="container px-6 pt-6">
                 <div class="flex justify-center mb-6">
                     <!--
