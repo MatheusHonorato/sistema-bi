@@ -1,4 +1,5 @@
 <x-app-layout>
+<div class="py-24" style="background: url('sobre-nos.jpg'); background-size: contain;">
 <div class="container max-w-xl mx-auto flex items-start flex flex-col">
     @if(Session::has('success-mail'))
 
@@ -14,8 +15,8 @@
 
     @endif
 
-    <div class="px-10 md:px-0">
-        <h1 class="mb-10 mt-10">Quem Somos</h1>
+    <div class="p-10 bg-white">
+        <h1 class="mb-10 mt-0">Quem Somos</h1>
 
         <p class="mb-5 text-justify">A Rebrax Assessoria atua na prestação de serviços técnicos especializados nas
         áreas de Administração de Empresas, Contábil, Engenharia de Dados, Business
@@ -30,5 +31,6 @@
 
         <p class="text-justify">Atuamos em todo o território nacional.</p>
     </div>
+</div>
 </div>
 </x-app-layout>
