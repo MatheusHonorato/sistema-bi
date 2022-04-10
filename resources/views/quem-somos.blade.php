@@ -1,5 +1,5 @@
 <x-app-layout>
-<div class="py-24" style="background: url('sobre-nos.jpg'); background-size: contain;">
+<div id="quem-somos" class="py-24" style="background: url('sobre-nos.jpg'); background-size: contain;">
 <div class="container max-w-xl mx-auto flex items-start flex flex-col">
     @if(Session::has('success-mail'))
 

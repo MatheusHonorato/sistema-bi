@@ -317,7 +317,16 @@
             color: black;
             background-color: transparent !important;
         }
+        #quem-somos {
+            background: url('sobre-nos.jpg');
+            background-size: contain;
+        }
 
+        @media screen and (max-width: 768px) {
+            #quem-somos {
+                background-size: cover !important;
+            }
+        }
         </style>
         <script>
             function check() {
