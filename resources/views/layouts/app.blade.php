@@ -318,7 +318,7 @@
             background-color: transparent !important;
         }
         #quem-somos {
-            background: url('sobre-nos.jpg');
+            background: url('quem-somos.jpg');
             background-size: contain;
         }
 
