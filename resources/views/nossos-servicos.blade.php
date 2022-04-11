@@ -14,7 +14,7 @@
         <ol class="list-decimal">
             <li>
                 <p class="mb-5 text-justify">
-                    <span class="font-medium">Acessoria Empresarial</span>: Prestamos serviços de Assessoria Financeira, Assessoria
+                    <span class="font-medium">Assessoria Empresarial</span>: Prestamos serviços de Assessoria Financeira, Assessoria
                     Organizacional, Assessoria Comercial, Assessoria de Marketing, Assessoria no
                     Treinamento e Capacitação de Pessoal, para organizações do segmento da indústria,
                     comércio e de prestação de serviços, inclusive na área da saúde.
