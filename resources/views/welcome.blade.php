@@ -57,20 +57,20 @@
 
             <!-- Page Content -->
             <main>
-            <div class="container max-w-xl mx-auto pt-20">
-                <a href="{{ route('dashboard') }}">
-                    <div class="px-10 md:px-0 flex flex-col mt-20">
-                        <div class="flex justify-center">
-                            <img src="logo.jpg" width="80px">
-                        </div>
-                        <h1 class="mt-10 mb-5 text-center">Bem-vindo(a) Rebrax Assessoria !</h1>
-                        <div class="flex justify-center">
-                            <button class="border border-2 border-black hover:bg-black hover:text-white w-80">Conhecer</button>
-                        </div>
-
+                <div class="banner">
+                    <div class="flex">
+                        <img src="banner.jpg" width="600px" id="banner">
+                        <a href="{{ route('dashboard') }}">
+                            <div class="px-10 md:px-0 flex flex-col sm:mt-20 mt-36">
+                                <h1 class="mt-10 mb-5 text-center">Simulador de Dados Tabulados</h1>
+                                <div class="mt-10 flex justify-center">
+                                    <img src="logo.jpg" width="80px">
+                                </div>
+                                <h1 class="mt-10 mb-5 text-center">Rebrax Assessoria</h1>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
+                </div>
             </main>
         </div>
 
@@ -331,19 +331,20 @@
             background-color: transparent !important;
         }
 
-        .banner {
-            background: url('banner.jpg');
-            background-size: cover;
-        }
         h1 {
             font-weight: 500;
-            font-size: 4rem;
-            line-height: 4rem;
+            font-size: 3rem;
+            line-height: 3rem;
         }
 
         @media only screen and (max-width: 600px) {
+            #banner {
+                display: none;
+            }
             .banner {
+                background: url('banner_mobile.jpg');
                 background-position-x: 50%;
+                background-size: cover;
             }
             h1 {
                 font-size: 2rem;
