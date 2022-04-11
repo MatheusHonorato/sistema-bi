@@ -226,7 +226,7 @@
                                     <td class="border px-4 py-2">{{ $client->bairro }}</td>
                                     <td class="border px-4 py-2">{{ $client->city->name }}</td>
                                     <td class="border px-4 py-2">{{ $client->city->state->name }}</td>
-                                    <td class="border px-4 py-2">{{ substr($client->cep, 0, 5) }} - {{ substr($client->cep, 5, 8) }}</td>
+                                    <td class="border px-4 py-2">{{ $client->cep }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
