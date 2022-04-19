@@ -61,7 +61,7 @@
                     <div class="flex">
                         <img src="banner.jpg" width="600px" id="banner">
                         <a href="{{ route('dashboard') }}">
-                            <div class="px-10 md:px-0 flex flex-col sm:mt-20 mt-36">
+                            <div class="px-10 md:px-5 flex flex-col sm:mt-20 mt-36">
                                 <h1 class="mt-10 mb-5 text-center">Rebrax vindo(a) à</h1>
                                 <div class="mt-10 flex justify-center">
                                     <img src="logo.jpg" width="80px">
@@ -332,7 +332,7 @@
 
         h1 {
             font-weight: 500;
-            font-size: 5rem;
+            font-size: 4.5rem;
             line-height: 3rem;
         }
 
