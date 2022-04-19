@@ -22,7 +22,7 @@
                     <x-jet-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Simulação - Dados Tabulados') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="https://api.whatsapp.com/send?phone=553884096996&text=Gostaria de fazer um orçamento." :active="request()->routeIs('comprar')">
+                    <x-jet-nav-link href="https://api.whatsapp.com/send?phone=553884096996&text=Gostaria de fazer um orçamento." :active="request()->routeIs('comprar')" target="_blank">
                         <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Pagamento Online') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
