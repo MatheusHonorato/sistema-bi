@@ -333,7 +333,7 @@
         h1 {
             font-weight: 500;
             font-size: 4.5rem;
-            line-height: 3rem;
+            line-height: 4rem;
         }
 
         @media only screen and (max-width: 600px) {
