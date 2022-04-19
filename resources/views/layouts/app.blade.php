@@ -320,6 +320,15 @@
             background: url('quem-somos.jpg');
             background-size: contain;
         }
+        .color-paleta {
+            color: #a67c63 !important;
+        }
+        .background-rose {
+            background-color: #F7C799;
+        }
+        footer {
+            position: relative;
+        }
 
         @media screen and (max-width: 768px) {
             #quem-somos {

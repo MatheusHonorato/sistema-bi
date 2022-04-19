@@ -12,8 +12,15 @@ Route::get('clients', Clients::class)->name('clients');
 
 Route::get('phones/{id}', Phone::class)->name('phones.show');
 
+Route::view('/tabulacao-de-dados-informacao', 'tabulacao-de-dados')->name('tabulacao-de-dados');
+
+Route::view('/levantamento-de-dados', 'levantamento-de-dados')->name('levantamento-de-dados');
+Route::view('/infraestutura-de-dados', 'infraestutura-de-dados')->name('infraestutura-de-dados');
+
+
 Route::get('tabulacao-de-dados', Dashboard::class)->name('dashboard');
 
+Route::view('/assessoria-empresarial', 'assessoria-empresarial')->name('assessoria-empresarial');
 Route::view('/quem-somos', 'quem-somos')->name('quem-somos');
 Route::view('/pagamento-online', 'comprar')->name('comprar');
 Route::view('/contato', 'contato')->name('contato');

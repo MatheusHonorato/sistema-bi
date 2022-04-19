@@ -13,7 +13,7 @@
                             Total: {{ $amount }}
                         </div>
                         <div class="w-full text-2xl mt-5 text-center">
-                            <button id="dropdownDefault" onclick="check()" data-dropdown-toggle="dropdown" class="w-full text-white bg-amber-900	 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-amber-900	 dark:focus:ring-blue-800" type="button"><i class="fa-solid fa-filter mr-2"></i> Estado(s)<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                            <button id="dropdownDefault" onclick="check()" data-dropdown-toggle="dropdown" class="w-full text-white bg-amber-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-amber-900	 dark:focus:ring-blue-800" type="button"><i class="fa-solid fa-filter mr-2"></i> Estado(s)<svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 
                             <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
                                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">

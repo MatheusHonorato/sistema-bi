@@ -1,16 +1,65 @@
 <x-app-layout>
-    <!--
-<div class="container max-w-xl mx-auto flex items-start">
+<!--<div class="container max-w-xl mx-auto flex items-start">
     <div class="px-10 md:px-0">
-        <h1 class="mb-10 mt-10">Nossos Serviços</h1>
 
-        <p class="mb-5 text-justify">Nosso principal objetivo tem sido desenvolver e implementar soluções que possibilitem aos
-        indivíduos e as organizações atuarem integrados aos seus respectivos públicos alvos, através
-        da implantação de práticas, sistemas, metodologias e de rotinas voltadas para a satisfação e
-        fidelização de seus clientes e também para a auto sustentação dos projetos e
-        empreendimentos.</p>
+        <div class="flex">
+            <div>
+                <h1 class="mb-10 mt-10 font-bold text-4xl color-paleta">Nossos Serviços</h1>
+                <h1 class="mb-10 mt-10 text-5xl">Tudo que você precisa saber</h1>
+            </div>
+            <img  src="logo.jpg"/>
+        </div>
 
-        <p class="mb-5 text-justify">Dentre os serviços técnicos especializados realizados pela <span class="font-medium">Rebrax Assessoria</span>, destacam-se:</p>
+        <div class="flex background-rose">
+            <img  src="logo.jpg"/>
+
+            <p class="mb-5 text-justify p-5">Nosso principal objetivo tem sido desenvolver e implementar soluções que possibilitem aos
+            indivíduos e as organizações atuarem integrados aos seus respectivos públicos alvos, através
+            da implantação de práticas, sistemas, metodologias e de rotinas voltadas para a satisfação e
+            fidelização de seus clientes e também para a auto sustentação dos projetos e
+            empreendimentos.</p>
+        </div>
+
+        <div class="flex p-3">
+            <img  src="logo.jpg"/>
+
+            <p class="mb-5 text-justify text-3xl font-bold pl-5">Dentre os serviços técnicos especializados realizados pela <span class="font-medium">Rebrax Assessoria</span>, destacam-se:</p>
+        </div>
+
+        <div>
+            <h2 class="mb-10 mt-10 text-3xl font-bold background-rose py-5 px-2">1 Acessoria Empresarial</h2>
+        </div>
+
+        <div>
+            <div class="flex">
+                <div class="px-2">
+                    <img src="logo.jpg"/>
+                    FINANCEIRA
+                </div>
+                <div class="px-2">
+                    <img src="logo.jpg"/>
+                    ORGANIZACIONAL
+                </div>
+                <div class="px-2">
+                    <img src="logo.jpg"/>
+                    COMERCIAL
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div>
+                    <img src="logo.jpg"/>
+                    MARKETING
+                </div>
+                <div>
+                    <img src="logo.jpg"/>
+                    TREINAMENTO E CAPACITAÇÃO
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="mb-10 mt-10 text-3xl font-bold background-rose py-5 px-2">2 Tabulação de dados</h2>
+        </div>
 
         <ol class="list-decimal">
             <li>
@@ -124,14 +173,14 @@
 
 
     </div>
+</div>-->
+<div class="container max-w-xl mx-auto flex items-start">
+      <div style="position: relative; width: 100%; height: 0; padding-top: 250.0000%;
+      padding-bottom: 48px; margin-bottom: -100px; position: relative;">
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+          src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE83OgEMxI&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
+      <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE83OgEMxI&#x2F;view?utm_content=DAE83OgEMxI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
 </div>
--->
-<div style="position: relative; width: 100%; height: 0; padding-top: 250.0000%;
- padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE83OgEMxI&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE83OgEMxI&#x2F;view?utm_content=DAE83OgEMxI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Azul Empresário Personalidades Negócios Infográfico</a>
 </x-app-layout>
