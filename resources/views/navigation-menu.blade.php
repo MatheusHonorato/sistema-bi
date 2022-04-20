@@ -20,7 +20,7 @@
                         <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Simulação - Dados Tabulados') }}
+                        <i class="fa-solid fa-table-list mr-2"></i> {{ __('Simulação - Dados Tabulados') }}
                     </x-jet-nav-link>
                     <x-jet-dropdown align="right" width="60">
                         <x-slot name="trigger">
@@ -37,10 +37,10 @@
                         <x-slot name="content">
                             <div class="w-60">
                             <x-jet-dropdown-link href="{{ route('gerar-etiquetas') }}">
-                                {{ __('Gerar etiquetas - Correios') }}
+                                <i class="fa-solid fa-tag mr-2"></i>{{ __('Gerar etiquetas - Correios') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('demonstracao-de-sincronizacao') }}">
-                                {{ __('Demonstração') }}
+                            <i class="fa-solid fa-chalkboard-user mr-2"></i> {{ __('Demonstração') }}
                             </x-jet-dropdown-link>
                             </div>
                         </x-slot>
@@ -183,18 +183,17 @@
             <x-jet-responsive-nav-link href="{{ route('nossos-servicos') }}" :active="request()->routeIs('nossos-servicos')">
                 <i class="fa-solid fa-chart-line mr-2"></i>{{ __('Nossos serviços') }}
             </x-jet-responsive-nav-link>
-            @if(request()->routeIs('dashboard'))
-            <x-jet-responsive-nav-link class="cursor-pointer" wire:click="$emit('viewClientes')" :active="request()->routeIs('dashboard')">
-                {{ __('Alternar - Gráficos | Tabela') }}
-            </x-jet-responsive-nav-link>
-            @endif
-            @if(!request()->routeIs('dashboard'))
             <x-jet-responsive-nav-link class="cursor-pointer" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Alternar - Gráficos | Tabela') }}
+                <i class="fa-solid fa-table-list mr-2"></i> {{ __('Simulação - Dados Tabulados') }}
             </x-jet-responsive-nav-link>
-            @endif
-            <x-jet-responsive-nav-link href="{{ route('comprar') }}" :active="request()->routeIs('comprar')">
-                <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Comprar') }}
+            <x-jet-responsive-nav-link href="{{ route('gerar-etiquetas') }}">
+                <i class="fa-solid fa-tag mr-2"></i>  {{ __('Gerar etiquetas - Correios') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('demonstracao-de-sincronizacao') }}">
+                <i class="fa-solid fa-chalkboard-user mr-2"></i>   {{ __('Demonstração') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="https://api.whatsapp.com/send?phone=553884096996&text=Gostaria de fazer um orçamento." :active="request()->routeIs('comprar')">
+                <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Pagamento online') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('contato') }}" :active="request()->routeIs('contato')">
                 <i class="fa-solid fa-envelope mr-2"></i> {{ __('Contato') }}
