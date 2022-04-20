@@ -62,7 +62,7 @@
                         <img src="banner.jpg" width="600px" id="banner">
                         <a href="{{ route('dashboard') }}">
                             <div class="px-14 md:px-12 flex flex-col sm:mt-20 mt-36">
-                                <h1 class="mt-10 mb-5 text-center">Rebrax vindo(a) à</h1>
+                                <h1 class="mt-10 mb-5 text-center">Bem vindo(a) à</h1>
                                 <div class="mt-10 flex justify-center">
                                     <img src="logo.jpg" width="80px">
                                 </div>
