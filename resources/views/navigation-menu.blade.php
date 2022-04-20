@@ -40,7 +40,7 @@
                                 <i class="fa-solid fa-tag mr-2"></i>{{ __('Gerar etiquetas - Correios') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('demonstracao-de-sincronizacao') }}">
-                            <i class="fa-solid fa-chalkboard-user mr-2"></i> {{ __('Demonstração') }}
+                            <i class="fa-solid fa-chalkboard-user mr-2"></i> {{ __('Sincronização - Demonstração') }}
                             </x-jet-dropdown-link>
                             </div>
                         </x-slot>
@@ -190,7 +190,7 @@
                 <i class="fa-solid fa-tag mr-2"></i>  {{ __('Gerar etiquetas - Correios') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('demonstracao-de-sincronizacao') }}">
-                <i class="fa-solid fa-chalkboard-user mr-2"></i>   {{ __('Demonstração') }}
+                <i class="fa-solid fa-chalkboard-user mr-2"></i>   {{ __('Sincronização - Demonstração') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="https://api.whatsapp.com/send?phone=553884096996&text=Gostaria de fazer um orçamento." :active="request()->routeIs('comprar')">
                 <i class="fa-solid fa-bag-shopping mr-2"></i>   {{ __('Pagamento online') }}
