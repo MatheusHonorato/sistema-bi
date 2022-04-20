@@ -183,7 +183,8 @@
             </div>
 
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
-                Rebrax Assessoria © 2022
+                <p>Rebrax Assessoria © 2022</p>
+                <p>contato@rebrax.com</p>
             </div>
             </footer>
 
