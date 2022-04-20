@@ -57,6 +57,17 @@
 
             <!-- Page Content -->
             <main>
+                @if(Session::has('success-mail'))
+
+                <div class="text-left w-full bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md" role="alert">
+                    <div class="flex">
+                        <div>
+                        <p class="font-bold">{{Session::get('success-mail')}} {{Session::get('details')}} {{Session::get('thanks')}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                @endif
                 <div class="banner">
                     <div class="flex">
                         <img src="banner.jpg" width="600px" id="banner">
