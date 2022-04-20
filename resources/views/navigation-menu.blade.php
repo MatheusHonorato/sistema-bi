@@ -42,10 +42,10 @@
 
                         <x-slot name="content">
                             <div class="w-60">
-                            <x-jet-dropdown-link href="{{ route('welcome') }}/correios.pdf" target="_blank">
+                            <x-jet-dropdown-link href="{{ route('gerar-etiquetas') }}">
                                 {{ __('Gerar etiquetas - Correios') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('welcome') }}/demonstracao.mp4" target="_blank">
+                            <x-jet-dropdown-link href="{{ route('demonstracao-de-sincronizacao') }}">
                                 {{ __('Demonstração') }}
                             </x-jet-dropdown-link>
                             </div>
