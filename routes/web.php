@@ -16,6 +16,8 @@ Route::view('/tabulacao-de-dados-informacao', 'tabulacao-de-dados')->name('tabul
 
 Route::view('/levantamento-de-dados', 'levantamento-de-dados')->name('levantamento-de-dados');
 Route::view('/infraestutura-de-dados', 'infraestutura-de-dados')->name('infraestutura-de-dados');
+Route::view('/demonstracao-de-sincronizacao', 'demonstracao-de-sincronizacao')->name('demonstracao-de-sincronizacao');
+Route::view('/gerar-etiquetas', 'gerar-etiquetas')->name('gerar-etiquetas');
 
 
 Route::get('tabulacao-de-dados', Dashboard::class)->name('dashboard');
