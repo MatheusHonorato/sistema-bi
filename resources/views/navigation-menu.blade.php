@@ -35,7 +35,7 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <div class="w-60">
+                            <div class="w-max">
                             <x-jet-dropdown-link href="{{ route('gerar-etiquetas') }}">
                                 <i class="fa-solid fa-tag mr-2"></i>{{ __('Gerar etiquetas - Correios') }}
                             </x-jet-dropdown-link>
