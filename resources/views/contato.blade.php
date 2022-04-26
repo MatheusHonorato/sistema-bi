@@ -84,7 +84,7 @@
                                     transition
                                     ease-in-out
                                     m-0
-                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
+                                    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none {{ $errors->has('state') ? 'border-red-500' : '' }}">
                                     <option selected disabled hidden></option>
                                     <option value="São Paulo">São Paulo</option>
                                     <option value="Paraná">Paraná</option>
@@ -112,19 +112,28 @@
                                     <option value="Distrito Federa">Distrito Federal</option>
                                     <option value="Piauí">Piauí</option>
                                     <option value="Ceará">Ceará</option>
-                                    <option value="Espírito Santo">Espírito Santo</option>                                </select>
+                                    <option value="Espírito Santo">Espírito Santo</option>
+                                </select>
+                                @if ($errors->has('state'))
+                                    <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('state') }}</p>
+                                @endif
                             </div>
 
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Cidade</label>
 
-                                <input type="text" name="city" id="city" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-
+                                <input type="text" name="city" id="city" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('city') ? 'border-red-500' : '' }}">
+                                @if ($errors->has('city'))
+                                    <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('city') }}</p>
+                                @endif
                             </div>
 
                             <div class="col-span-12">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Descrição</label>
-                                <textarea name="descricao" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea name="descricao" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none {{ $errors->has('descricao') ? 'border-red-500' : '' }}" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                @if ($errors->has('descricao'))
+                                    <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('descricao') }}</p>
+                                @endif
                             </div>
                         </div>
                     </div>
