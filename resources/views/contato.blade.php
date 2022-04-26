@@ -53,12 +53,18 @@
 
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">E-mail</label>
-                                <input type="email" name="email" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                <input type="email" name="email" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('email') ? 'border-red-500' : '' }}">
+                                @if ($errors->has('email'))
+                                    <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('email') }}</p>
+                                @endif
                             </div>
 
                             <div class="col-span-12 md:col-span-4">
-                                <label for="name" class="block text-sm font-medium text-gray-700">Telefone</label>
-                                <input type="text" name="phone" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Telefone</label>
+                                <input type="text" name="phone" id="phone" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}">
+                                @if ($errors->has('phone'))
+                                    <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('phone') }}</p>
+                                @endif
                             </div>
 
                             <div class="col-span-12 md:col-span-4">
