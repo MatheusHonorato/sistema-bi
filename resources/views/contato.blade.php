@@ -43,6 +43,11 @@
                             <div class="col-span-12 md:col-span-4">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Nome/Razão Social</label>
                                 <input type="text" name="name" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                @if ($errors->has('name'))
+                                <span class="help-block text-danger">
+                                    <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                                @endif
                             </div>
 
                             <div class="col-span-12 md:col-span-8">
@@ -106,7 +111,7 @@
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Cidade</label>
 
-                                <input type="text" name="city" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                <input type="text" name="city" id="city" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 
                             </div>
 
