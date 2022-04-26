@@ -16,9 +16,21 @@ class ContactMailController extends Controller
     public function index(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:100']
+            'identificacao' => ['required', 'string', 'max:100'],
+            'name' => ['required', 'string', 'max:100'],
+            'email' => ['required', 'email', 'max:100'],
+            'phone' => ['required', 'string', 'max:100'],
+            'state' => ['required', 'number'],
+            'city' => ['required', 'string'],
+            'descricao' => ['required', 'string', 'max:100']
         ],[
-            'name.required' => 'O campo Nome é obrigatório.',
+            'identificacao.required' => 'O campo identificação é obrigatório.',
+            'name.required' => 'O campo nome é obrigatório.',
+            'email.required' => 'O campo e-mail é obrigatório.',
+            'phone.required' => 'O campo telefone é obrigatório.',
+            'state.required' => 'O campo estado é obrigatório.',
+            'city.required' => 'O campo cidade é obrigatório.',
+            'descricao.required' => 'O campo descrição é obrigatório.'
         ]);
 
         $mailData = [
