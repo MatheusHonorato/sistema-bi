@@ -15,6 +15,12 @@ class ContactMailController extends Controller
      */
     public function index(Request $request)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'max:100']
+        ],[
+            'name.required' => 'O campo Nome é obrigatório.',
+        ]);
+
         $mailData = [
             'identificacao' => $request->identificacao,
             'name' => $request->name,
