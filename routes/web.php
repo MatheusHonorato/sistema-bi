@@ -32,7 +32,6 @@ Route::post('send-contact-mail', [ContactMailController::class, 'index'])->name(
 
 Route::redirect('/register', '/tabulacao-de-dados', 301);
 
-
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');*/
