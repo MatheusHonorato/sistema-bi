@@ -19,10 +19,12 @@ class ContactMailController extends Controller
             'identificacao' => ['required', 'string', 'max:100'],
             'name' => ['required', 'string', 'max:100'],
             'email' => ['required', 'email', 'max:100'],
-            'phone' => ['required', 'string', 'max:100'],
-            'state' => ['required', 'number'],
-            'city' => ['required', 'string'],
-            'descricao' => ['required', 'string', 'max:100']
+            
+        ],[
+            'identificacao.required' => 'O campo identificação é obrigatório.',
+            'name.required' => 'O campo nome é obrigatório.',
+            'email.required' => 'O campo e-mail é obrigatório.',
+            
         ]);
 
         $mailData = [
