@@ -1,10 +1,10 @@
 <h1>E-mail de contato</h1>
 
 
-<p>{{ $mailData['identificacao'] }}</p>
-<p>{{ $mailData['name'] }}</p>
-<p>{{ $mailData['email'] }}</p>
-<p>{{ $mailData['phone'] }}</p>
-<p>{{ $mailData['state'] }}</p>
-<p>{{ $mailData['city'] }}</p>
-<p>{{ $mailData['descricao'] }}</p>
+<p>Identifição: {{ $mailData['identificacao'] }}</p>
+<p>Nome: {{ $mailData['name'] }}</p>
+<p>E-mail: {{ $mailData['email'] }}</p>
+<p>Telefone: {{ $mailData['phone'] }}</p>
+<p>Estado: {{ $mailData['state'] }}</p>
+<p>Cidade: {{ $mailData['city'] }}</p>
+<p>Descrição: {{ $mailData['descricao'] }}</p>
