@@ -61,9 +61,24 @@ cadastrais que a Rebrax Assessoria trata a seu respeito.</li>
           <li>Eliminar seus dados tratados a partir de seu consentimento, exceto nos casos
 previstos em lei.</li>
           <li>Revogar seu consentimento, desautorizando o tratamento de seus dados.</li>
-          <li>Informar-se sobre a possibilidade de não fornecer seu consentimento e
-sobre as consequências da negativa.</li>
+          <li>Informar-se sobre a possibilidade de não fornecer seu consentimento e sobre as consequências da negativa.</li>
         </ul>
+        <h2 class="mb-10 mt-0 font-bold">Como você pode exercer seus direitos de titular?</h2>
+        <p class="text-justify font-medium">Para exercer seus direitos de titular, você deve entrar em contato com a Rebrax
+Assessoria através dos seguintes meios disponíveis: contato@rebrax.com .  
+De forma a garantir a sua correta identificação como titular dos dados pessoais objeto da
+solicitação, é possível que solicitemos documentos ou demais comprovações que possam
+comprovar sua identidade. Nessa hipótese, você será informado previamente.</p>
+
+        <h2 class="mb-10 mt-0 font-bold">Como e por quanto tempo seus dados serão armazenados?</h2>
+        <p class="text-justify font-medium">Seus dados pessoais coletados pela Rebrax Assessoria serão utilizados e armazenados
+durante o tempo necessário para a prestação do serviço ou para que as finalidades elencadas
+na presente Política de Privacidade sejam atingidas, considerando os direitos dos titulares
+dos dados e dos controladores.
+De modo geral, seus dados serão mantidos enquanto a relação contratual entre você e
+a Rebrax Assessoria perdurar. Findado o período de armazenamento dos dados pessoais,
+estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses
+legalmente previstas no artigo 16 lei geral de proteção de dados, a saber:</p>
       </div>
   </div>
 
