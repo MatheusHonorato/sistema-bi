@@ -27,6 +27,7 @@ Route::view('/quem-somos', 'quem-somos')->name('quem-somos');
 Route::view('/pagamento-online', 'comprar')->name('comprar');
 Route::view('/contato', 'contato')->name('contato');
 Route::view('/nossos-servicos', 'nossos-servicos')->name('nossos-servicos');
+Route::view('/politicas-privacidade', 'politicas-privacidade')->name('politicas-privacidade');
 
 Route::post('send-contact-mail', [ContactMailController::class, 'index'])->name('contact.mail');
 
