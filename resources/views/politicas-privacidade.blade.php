@@ -53,6 +53,16 @@
 formato claro e completo;</li>
           <li>Acessar seus dados, podendo solicitá-los em uma cópia legível sob forma impressa
 ou por meio eletrônico, seguro e idôneo;</li>
+          <li>Corrigir seus dados, ao solicitar a edição, correção ou atualização destes.</li>
+          <li>Limitar seus dados quando desnecessários, excessivos ou tratados em
+desconformidade com a legislação através da anonimização, bloqueio ou eliminação.</li>
+          <li>Solicitar a portabilidade de seus dados, através de um relatório de dados
+cadastrais que a Rebrax Assessoria trata a seu respeito.</li>
+          <li>Eliminar seus dados tratados a partir de seu consentimento, exceto nos casos
+previstos em lei.</li>
+          <li>Revogar seu consentimento, desautorizando o tratamento de seus dados.</li>
+          <li>Informar-se sobre a possibilidade de não fornecer seu consentimento e
+sobre as consequências da negativa.</li>
         </ul>
       </div>
   </div>
