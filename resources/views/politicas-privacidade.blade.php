@@ -48,7 +48,7 @@
           artigo 18 da Lei Geral de Proteção de Dados. Dessa forma, você pode, de maneira gratuita e
           a qualquer tempo:
         </p>
-        <ul>
+        <ul class="list-disc">
           <li>Confirmar a existência de tratamento de dados, de maneira simplificada ou em
 formato claro e completo;</li>
           <li>Acessar seus dados, podendo solicitá-los em uma cópia legível sob forma impressa
