@@ -1,6 +1,7 @@
 <x-app-layout>
 <div id="quem-somos" class="py-24">
-<div class="container max-w-xl mx-auto flex items-start flex flex-col">
+
+  <div class="container max-w-xl mx-auto flex items-start flex flex-col">
     <div class="p-10 bg-white">
         <h1 class="mb-10 mt-0 font-bold">Politicas de privacidade</h1>
 
@@ -48,6 +49,7 @@
           a qualquer tempo:
         </p>
       </div>
-</div>
+  </div>
+
 </div>
 </x-app-layout>
