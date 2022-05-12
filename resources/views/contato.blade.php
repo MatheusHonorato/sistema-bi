@@ -17,7 +17,7 @@
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-12 md:col-span-8">
-                                <label for="name" class="block text-sm font-medium text-gray-700">Identifição</label>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Identifição</label><span class="text-red-600">*</span>
 
                                 <select name="identificacao" class="mt-1 form-select appearance-none
                                     block
