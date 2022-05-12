@@ -79,7 +79,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           a Rebrax Assessoria perdurar. Findado o período de armazenamento dos dados pessoais,
           estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses
           legalmente previstas no artigo 16 lei geral de proteção de dados, a saber:</p>
-          <ol>
+          <ol class="list-decimal">
             <li>cumprimento de obrigação legal ou regulatória pelo controlador;</li>
           </ol>
       </div>
