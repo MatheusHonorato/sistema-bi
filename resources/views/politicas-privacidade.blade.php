@@ -80,8 +80,68 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses
           legalmente previstas no artigo 16 lei geral de proteção de dados, a saber:</p>
           <ol class="list-decimal">
-            <li>cumprimento de obrigação legal ou regulatória pelo controlador;</li>
+            <li>Cumprimento de obrigação legal ou regulatória pelo controlador;</li>
+            <li>Estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais;</li>
+            <li>transferência a terceiro, desde que respeitados os requisitos de tratamento de dados dispostos nesta Lei; ou</li>
+            <li>uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados.</li>
           </ol>
+        <p class="text-justify font-medium">
+          Isto é, informações pessoais sobre você que sejam imprescindíveis para o cumprimento de determinações legais, judiciais e administrativas e/ou para o exercício do direito de defesa em processos judiciais e administrativos serão mantidas, a despeito da exclusão dos demais dados.
+        </p>
+        <p class="text-justify font-medium">
+          O armazenamento de dados coletados pela Rebrax Assessoria reflete o nosso compromisso com a segurança e privacidade dos seus dados. Empregamos medidas e soluções técnicas de proteção aptas a garantir a confidencialidade, integridade e inviolabilidade dos seus dados.
+        </p>
+        <p class="text-justify font-medium">
+          Além disso, também contamos com medidas de segurança apropriadas aos riscos e com controle de acesso às informações armazenadas.
+        </p>
+
+        <h2 class="mb-10 mt-0 font-bold">O que fazemos para manter seus dados seguros?</h2>
+        <p class="text-justify font-medium">
+          Para mantermos suas informações pessoais seguras, usamos ferramentas físicas, eletrônicas e gerenciais orientadas para a proteção da sua privacidade.
+        </p>
+        <p class="text-justify font-medium">
+          Aplicamos essas ferramentas levando em consideração a natureza dos dados pessoais coletados, o contexto e a finalidade do tratamento e os riscos que eventuais violações gerariam para os direitos e liberdades do titular dos dados coletados e tratados.
+        </p>
+
+        <p class="text-justify font-medium">
+          Entre as medidas que adotamos, destacamos as seguintes:
+        </p>
+
+        <p class="text-justify font-medium">
+          Apenas pessoas autorizadas têm acesso a seus dados pessoais.
+        </p>
+
+        <p class="text-justify font-medium">
+          O acesso a seus dados pessoais é feito somente após o compromisso de confidencialidade
+        </p>
+
+        <p class="text-justify font-medium">
+          Seus dados pessoais são armazenados em ambiente seguro e idôneo.
+        </p>
+
+        <p class="text-justify font-medium">
+          A Rebrax Assessoria se compromete a adotar as melhores posturas para evitar incidentes de segurança. Contudo, é necessário destacar que nenhuma página virtual é inteiramente segura e livre de riscos. É possível que, apesar de todos os nossos protocolos de segurança, problemas de culpa exclusivamente de terceiros ocorram, como ataques cibernéticos de hackers, ou também em decorrência da negligência ou imprudência do próprio usuário/cliente.
+        </p>
+
+        <p class="text-justify font-medium">
+          Em caso de incidentes de segurança que possa gerar risco ou dano relevante para você ou qualquer um de nossos usuários/clientes, comunicaremos aos afetados e a Autoridade Nacional de Proteção de Dados sobre o ocorrido, em consonância com as disposições da Lei Geral de Proteção de Dados.
+        </p>
+
+        <h2 class="mb-10 mt-0 font-bold">Com quem seus dados podem ser compartilhados?</h2>
+
+        <p class="text-justify font-medium">
+          Tendo em vista a preservação de sua privacidade, a Rebrax Assessoria não compartilhará seus dados pessoais com nenhum terceiro não autorizado.
+        </p>
+
+        <p class="text-justify font-medium">
+          Seus dados poderão ser compartilhados com nossos parceiros comerciais, tendo em vista a execução de rotinas e procedimentos técnicos relacionados com a tabulação dos dados, tratamento dos dados e hospedagem dos mesmos.
+        </p>
+        <p class="text-justify font-medium">
+          Estes recebem seus dados apenas na medida do necessário para a prestação dos serviços contratados e nossos contratos são orientados pelas normas de proteção de dados do ordenamento jurídico brasileiro.
+        </p>
+        <p class="text-justify font-medium">
+          Além disso, também existem outras hipóteses em que seus dados poderão ser compartilhados, que são:
+        </p>
       </div>
   </div>
 
