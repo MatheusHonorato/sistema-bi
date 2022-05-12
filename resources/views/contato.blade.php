@@ -61,7 +61,7 @@
 
                             <div class="col-span-12 md:col-span-4">
                                 <label for="phone" class="block text-sm font-medium text-gray-700">Telefone</label>
-                                <input type="text" name="phone" id="phone" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}" onblur="mascaraDeTelefone(this)">
+                                <input type="text" name="phone" id="phone" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}" onkeypress="mascaraDeTelefone(this)">
                                 @if ($errors->has('phone'))
                                     <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('phone') }}</p>
                                 @endif
@@ -151,21 +151,13 @@
 </div>
 <script>
   function mascaraDeTelefone(telefone){
-    const textoAtual = telefone.value;
-    const isCelular = textoAtual.length === 9;
-    let textoAjustado;
-    
-    if(isCelular) {
-        const parte1 = textoAtual.slice(0,5);
-        const parte2 = textoAtual.slice(5,9);
-        textoAjustado = `${parte1}-${parte2}`        
-    } else {
-        const parte1 = textoAtual.slice(0,4);
-        const parte2 = textoAtual.slice(4,8);
-        textoAjustado = `${parte1}-${parte2}`
-    }
+    if(telefone.value.length == 0)
+        telefone.value = '(' + telefone.value; 
+    if(telefone.value.length == 3)
+        telefone.value = telefone.value + ') '; 
 
-    telefone.value = textoAjustado;
+    if(telefone.value.length == 8)
+        telefone.value = telefone.value + '-';
   }
 </script>
 </x-app-layout>
