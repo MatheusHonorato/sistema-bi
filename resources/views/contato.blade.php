@@ -61,7 +61,7 @@
 
                             <div class="col-span-12 md:col-span-4">
                                 <label for="phone" class="block text-sm font-medium text-gray-700">Telefone<span class="text-red-600 pl-1">*</span></label>
-                                <input type="text" name="phone" id="phone" autocomplete="given-name" pattern="\(\d{2}\)\d{4}-\d{4}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}">
+                                <input type="text" name="phone" id="phone" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}">
                                 @if ($errors->has('phone'))
                                     <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('phone') }}</p>
                                 @endif
@@ -150,14 +150,16 @@
     </div>
 </div>
 <script>
-  function mascaraDeTelefone(telefone){
-    if(telefone.value.length == 0)
-        telefone.value = '(' + telefone.value; 
-    if(telefone.value.length == 3)
-        telefone.value = telefone.value + ') '; 
+  const tel = document.getElementById('phone') // Seletor do campo de telefone
 
-    if(telefone.value.length == 8)
-        telefone.value = telefone.value + '-';
+  tel.addEventListener('keypress', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
+  tel.addEventListener('change', (e) => mascaraTelefone(e.target.value)) // Dispara quando autocompletado o campo
+
+  const mascaraTelefone = (valor) => {
+      valor = valor.replace(/\D/g, "")
+      valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2")
+      valor = valor.replace(/(\d)(\d{4})$/, "$1-$2")
+      tel.value = valor // Insere o(s) valor(es) no campo
   }
 </script>
 </x-app-layout>
