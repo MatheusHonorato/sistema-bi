@@ -171,7 +171,7 @@
 
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
                 <p>CNPJ: 12.505.607/0001-02 - Rebrax Assessoria .  Todos os direitos reservados  © 2022</p>
-                <p><a href="{{ route('politicas-privacidade') }}">Políticas de Privacidade</a> - <a href="mailto:contato@rebrax.com">contato@rebrax.com</a></p>
+                <p class="underline"><a href="{{ route('politicas-privacidade') }}">Políticas de Privacidade</a> - <a href="mailto:contato@rebrax.com">contato@rebrax.com</a></p>
             </div>
             </footer>
 
