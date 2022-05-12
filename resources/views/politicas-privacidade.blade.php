@@ -142,6 +142,24 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
         <p class="text-justify font-medium">
           Além disso, também existem outras hipóteses em que seus dados poderão ser compartilhados, que são:
         </p>
+
+        <ol class="list-decimal">
+          <li>Determinação legal, requerimento, requisição ou ordem judicial, com autoridades judiciais, administrativas ou governamentais competentes.</li>
+          <li>Caso de movimentações societárias, como fusão, aquisição e incorporação, de forma
+          automática</li>
+          <li>Proteção dos direitos da Rebrax Assessoria em qualquer tipo de conflito, inclusive os de
+          teor judicial.</li>
+        </ol>
+
+          <h2 class="mb-10 mt-0 font-bold">Cookies ou dados de navegação</h2>
+
+          <p class="text-justify font-medium">
+            A Rebrax Assessoria faz uso de Cookies, que são arquivos de texto enviados pela plataforma ao seu computador e que nele se armazenam, que contém informações relacionadas à navegação do site. Em suma, os Cookies são utilizados para aprimorar a experiência de uso.
+          </p>
+
+          <p>
+          Ao acessar nosso site e consentir com o uso de Cookies, você manifesta conhecer e aceitar a utilização de um sistema de coleta de dados de navegação com o uso de Cookies em seu dispositivo.
+          </p>
       </div>
   </div>
 
