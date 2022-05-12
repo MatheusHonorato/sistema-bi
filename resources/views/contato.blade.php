@@ -45,7 +45,7 @@
 
                             <div class="col-span-12 md:col-span-4">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Nome/Razão Social<span class="text-red-600 pl-1">*</span></label>
-                                <input type="text" name="name" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('name') ? 'border-red-500' : '' }}">
+                                <input type="text" name="name" id="name"  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('name') ? 'border-red-500' : '' }}">
                                 @if ($errors->has('name'))
                                     <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('name') }}</p>
                                 @endif
@@ -53,7 +53,7 @@
 
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">E-mail<span class="text-red-600 pl-1">*</span></label>
-                                <input type="email" name="email" id="name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('email') ? 'border-red-500' : '' }}">
+                                <input type="email" name="email" id="name"  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('email') ? 'border-red-500' : '' }}">
                                 @if ($errors->has('email'))
                                     <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('email') }}</p>
                                 @endif
@@ -61,7 +61,7 @@
 
                             <div class="col-span-12 md:col-span-4">
                                 <label for="phone" class="block text-sm font-medium text-gray-700">Telefone<span class="text-red-600 pl-1">*</span></label>
-                                <input type="text" name="phone" id="phone" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}">
+                                <input type="text" name="phone" id="phone" maxlength="15" pattern="\(\d{2}\)\s*\d{5}-\d{4}" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('phone') ? 'border-red-500' : '' }}">
                                 @if ($errors->has('phone'))
                                     <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('phone') }}</p>
                                 @endif
@@ -122,7 +122,7 @@
                             <div class="col-span-12 md:col-span-8">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Cidade<span class="text-red-600 pl-1">*</span></label>
 
-                                <input type="text" name="city" id="city" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('city') ? 'border-red-500' : '' }}">
+                                <input type="text" name="city" id="city"  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md {{ $errors->has('city') ? 'border-red-500' : '' }}">
                                 @if ($errors->has('city'))
                                     <p class="text-red-500 text-xs italic mt-2">{{ $errors->first('city') }}</p>
                                 @endif
