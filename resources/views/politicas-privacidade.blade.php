@@ -72,13 +72,16 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
 
         <h2 class="mb-10 mt-0 font-bold">Como e por quanto tempo seus dados serão armazenados?</h2>
         <p class="text-justify font-medium">Seus dados pessoais coletados pela Rebrax Assessoria serão utilizados e armazenados
-durante o tempo necessário para a prestação do serviço ou para que as finalidades elencadas
-na presente Política de Privacidade sejam atingidas, considerando os direitos dos titulares
-dos dados e dos controladores.
-De modo geral, seus dados serão mantidos enquanto a relação contratual entre você e
-a Rebrax Assessoria perdurar. Findado o período de armazenamento dos dados pessoais,
-estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses
-legalmente previstas no artigo 16 lei geral de proteção de dados, a saber:</p>
+          durante o tempo necessário para a prestação do serviço ou para que as finalidades elencadas
+          na presente Política de Privacidade sejam atingidas, considerando os direitos dos titulares
+          dos dados e dos controladores.
+          De modo geral, seus dados serão mantidos enquanto a relação contratual entre você e
+          a Rebrax Assessoria perdurar. Findado o período de armazenamento dos dados pessoais,
+          estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses
+          legalmente previstas no artigo 16 lei geral de proteção de dados, a saber:</p>
+          <ol>
+            <li>cumprimento de obrigação legal ou regulatória pelo controlador;</li>
+          </ol>
       </div>
   </div>
 
