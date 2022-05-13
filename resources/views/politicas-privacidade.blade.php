@@ -48,7 +48,7 @@
           artigo 18 da Lei Geral de Proteção de Dados. Dessa forma, você pode, de maneira gratuita e
           a qualquer tempo:
         </p>
-        <ul class="list-disc pl-5">
+        <ul class="list-disc pl-5 mt-5">
           <li>Confirmar a existência de tratamento de dados, de maneira simplificada ou em
 formato claro e completo;</li>
           <li>Acessar seus dados, podendo solicitá-los em uma cópia legível sob forma impressa
@@ -79,7 +79,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           a Rebrax Assessoria perdurar. Findado o período de armazenamento dos dados pessoais,
           estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses
           legalmente previstas no artigo 16 lei geral de proteção de dados, a saber:</p>
-          <ol class="list-decimal pl-5">
+          <ol class="list-decimal pl-5 mt-5">
             <li>Cumprimento de obrigação legal ou regulatória pelo controlador;</li>
             <li>Estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais;</li>
             <li>transferência a terceiro, desde que respeitados os requisitos de tratamento de dados dispostos nesta Lei; ou</li>
@@ -143,7 +143,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           Além disso, também existem outras hipóteses em que seus dados poderão ser compartilhados, que são:
         </p>
 
-        <ol class="list-decimal pl-5">
+        <ol class="list-decimal pl-5 mt-5">
           <li>Determinação legal, requerimento, requisição ou ordem judicial, com autoridades judiciais, administrativas ou governamentais competentes.</li>
           <li>Caso de movimentações societárias, como fusão, aquisição e incorporação, de forma
           automática</li>
@@ -169,7 +169,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
             Para gerenciar os cookies do seu navegador, basta fazê-lo diretamente nas configurações do navegador, na área de gestão de Cookies. Você pode acessar tutoriais sobre o tema diretamente nos links abaixo:
           </p>
 
-          <ol class="list-decimal pl-5">
+          <ol class="list-decimal pl-5 mt-5">
             <li>Se você usa o Internet Explorer.</li>
             <li>Se você usa o Firefox.</li>
             <li>Se você usa o Safari.</li>
@@ -223,7 +223,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
             Conforme mencionado no Tópico 6, embora adotemos elevados padrões de segurança a fim de evitar incidentes, não há nenhuma página virtual inteiramente livre de riscos. Nesse sentido, a Rebrax Assessoria não se responsabiliza por:
           </p>
 
-          <ol class="list-decimal pl-5">
+          <ol class="list-decimal pl-5 mt-5">
 
             <li>Quaisquer consequências decorrentes da negligência, imprudência ou imperícia dos
             usuários em relação a seus dados individuais. Garantimos e nos responsabilizamos apenas
