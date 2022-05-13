@@ -3,7 +3,7 @@
 
   <div class="container max-w-xl mx-auto flex items-start flex flex-col">
     <div class="p-10 bg-white">
-        <h1 class="mb-10 mt-0 font-bold">Politicas de privacidade</h1>
+        <h1 class="mb-5 mt-10 font-bold">Politicas de privacidade</h1>
 
         <p class="mb-5 text-justify">Privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários/clientes.</p>
 
@@ -13,7 +13,7 @@
 
         <p class="mb-5 text-justify">Dessa forma, a Rebrax – Rede Nacional de Informações Cadastrais Ltda - ME, inscrita no CNPJ/MF sob o nº 12.505.607/0001-02, aqui denominada simplesmente Rebrax Assessoria (Marca Fantasia), no papel de Controladora de Dados, obriga-se ao disposto na presente Política de Privacidade.</p>
 
-        <h2 class="mb-10 mt-0 font-bold">Quais dados coletamos sobre você e para qual finalidade?</h2>
+        <h2 class="mb-5 mt-10 font-bold">Quais dados coletamos sobre você e para qual finalidade?</h2>
 
         <p class="text-justify">Nosso site e/ou através de formulários digitais, coletamos e utilizamos alguns dados pessoais seus, de forma a viabilizar a prestação de serviços e aprimorar a experiência de uso.</p>
     
@@ -21,11 +21,11 @@
 
         <p class="text-justify">Nome (podendo ser completo, ou não). E-mail, com a finalidade de enviarmos atualizações, conteúdos, publicidade e entrar em contato. Telefone, com a finalidade de enviarmos atualizações, conteúdos, publicidade e entrar em contato.</p>
 
-        <h2 class="mb-10 mt-0 font-bold">Como coletamos os seus dados?</h2>
+        <h2 class="mb-5 mt-10 font-bold">Como coletamos os seus dados?</h2>
         
         <p class="text-justify">Nesse sentido, a coleta dos seus dados pessoais ocorre da seguinte forma: Através de um formulário de cadastro disponibilizado no site www.rebrax.com e/ou através de formulários digitais.</p>
       
-        <h2 class="mb-10 mt-0 font-bold">Consentimento</h2>
+        <h2 class="mb-5 mt-10 font-bold">Consentimento</h2>
         <p class="text-justify">É a partir do seu consentimento que tratamos os seus dados pessoais. O consentimento é a
           manifestação livre, informada e inequívoca pela qual você autoriza a Rebrax Assessoria a
           tratar seus dados.
@@ -43,7 +43,7 @@
           dependa da operação. Tais consequências serão informadas previamente.
         </p>
 
-        <h2 class="mb-10 mt-0 font-bold">Quais são os seus direitos?</h2>
+        <h2 class="mb-5 mt-10 font-bold">Quais são os seus direitos?</h2>
         <p class="text-justify">A Rebrax Assessoria assegura a seus usuários/clientes seus direitos de titular previstos no
           artigo 18 da Lei Geral de Proteção de Dados. Dessa forma, você pode, de maneira gratuita e
           a qualquer tempo:
@@ -63,14 +63,14 @@ previstos em lei.</li>
           <li>Revogar seu consentimento, desautorizando o tratamento de seus dados.</li>
           <li>Informar-se sobre a possibilidade de não fornecer seu consentimento e sobre as consequências da negativa.</li>
         </ul>
-        <h2 class="mb-10 mt-0 font-bold">Como você pode exercer seus direitos de titular?</h2>
+        <h2 class="mb-5 mt-10 font-bold">Como você pode exercer seus direitos de titular?</h2>
         <p class="text-justify">Para exercer seus direitos de titular, você deve entrar em contato com a Rebrax
 Assessoria através dos seguintes meios disponíveis: contato@rebrax.com .  
 De forma a garantir a sua correta identificação como titular dos dados pessoais objeto da
 solicitação, é possível que solicitemos documentos ou demais comprovações que possam
 comprovar sua identidade. Nessa hipótese, você será informado previamente.</p>
 
-        <h2 class="mb-10 mt-0 font-bold">Como e por quanto tempo seus dados serão armazenados?</h2>
+        <h2 class="mb-5 mt-10 font-bold">Como e por quanto tempo seus dados serão armazenados?</h2>
         <p class="text-justify">Seus dados pessoais coletados pela Rebrax Assessoria serão utilizados e armazenados
           durante o tempo necessário para a prestação do serviço ou para que as finalidades elencadas
           na presente Política de Privacidade sejam atingidas, considerando os direitos dos titulares
@@ -95,7 +95,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           Além disso, também contamos com medidas de segurança apropriadas aos riscos e com controle de acesso às informações armazenadas.
         </p>
 
-        <h2 class="mb-10 mt-0 font-bold">O que fazemos para manter seus dados seguros?</h2>
+        <h2 class="mb-5 mt-10 font-bold">O que fazemos para manter seus dados seguros?</h2>
         <p class="text-justify">
           Para mantermos suas informações pessoais seguras, usamos ferramentas físicas, eletrônicas e gerenciais orientadas para a proteção da sua privacidade.
         </p>
@@ -127,7 +127,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           Em caso de incidentes de segurança que possa gerar risco ou dano relevante para você ou qualquer um de nossos usuários/clientes, comunicaremos aos afetados e a Autoridade Nacional de Proteção de Dados sobre o ocorrido, em consonância com as disposições da Lei Geral de Proteção de Dados.
         </p>
 
-        <h2 class="mb-10 mt-0 font-bold">Com quem seus dados podem ser compartilhados?</h2>
+        <h2 class="mb-5 mt-10 font-bold">Com quem seus dados podem ser compartilhados?</h2>
 
         <p class="text-justify">
           Tendo em vista a preservação de sua privacidade, a Rebrax Assessoria não compartilhará seus dados pessoais com nenhum terceiro não autorizado.
@@ -151,7 +151,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           teor judicial.</li>
         </ol>
 
-          <h2 class="mb-10 mt-0 font-bold">Cookies ou dados de navegação</h2>
+          <h2 class="mb-5 mt-10 font-bold">Cookies ou dados de navegação</h2>
 
           <p class="text-justify">
             A Rebrax Assessoria faz uso de Cookies, que são arquivos de texto enviados pela plataforma ao seu computador e que nele se armazenam, que contém informações relacionadas à navegação do site. Em suma, os Cookies são utilizados para aprimorar a experiência de uso.
@@ -178,7 +178,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
             <li>Se você usa o Opera.</li>
           </ol>
 
-          <h2 class="mb-10 mt-0 font-bold">Alteração desta Política de Privacidade</h2>
+          <h2 class="mb-5 mt-10 font-bold">Alteração desta Política de Privacidade</h2>
 
           <p class="text-justify">
             A atual versão da Política de Privacidade foi formulada e atualizada pela última vez em: 06 de maio de 2022.
@@ -200,7 +200,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
             Ao utilizar nossos serviços e fornecer seus dados pessoais após tais modificações, você as consente.
           </p>
 
-          <h2 class="mb-10 mt-0 font-bold">Responsabilidade</h2>
+          <h2 class="mb-5 mt-10 font-bold">Responsabilidade</h2>
 
           <p class="text-justify">
             A Rebrax Assessoria prevê a responsabilidade dos agentes que atuam nos processos de tratamento de dados, em conformidade com os artigos 42 ao 45 da Lei Geral de Proteção de Dados.
@@ -218,7 +218,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
             Caso a Autoridade Nacional de Proteção de Dados exija a adoção de providências em relação ao tratamento de dados realizado pela Rebrax Assessoria, comprometemo-nos a segui-las.
           </p>
 
-          <h2 class="mb-10 mt-0 font-bold">Isenção de responsabilidade</h2>
+          <h2 class="mb-5 mt-10 font-bold">Isenção de responsabilidade</h2>
           <p class="text-justify">
             Conforme mencionado no Tópico 6, embora adotemos elevados padrões de segurança a fim de evitar incidentes, não há nenhuma página virtual inteiramente livre de riscos. Nesse sentido, a Rebrax Assessoria não se responsabiliza por:
           </p>
@@ -247,7 +247,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
             </li>
           </ol>
 
-          <h2 class="mb-10 mt-0 font-bold">Encarregado de Proteção de Dados</h2>
+          <h2 class="mb-5 mt-10 font-bold">Encarregado de Proteção de Dados</h2>
 
           <p class="text-justify">A Rebrax Assessoria disponibiliza os seguintes meios para que você possa entrar em contato conosco para exercer seus direitos de titular: contato@rebrax.com .</p>
 
