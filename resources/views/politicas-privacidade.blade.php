@@ -17,7 +17,7 @@
 
         <p class="text-justify">Nosso site e/ou através de formulários digitais, coletamos e utilizamos alguns dados pessoais seus, de forma a viabilizar a prestação de serviços e aprimorar a experiência de uso.</p>
     
-        <h2 class="mb-10 mt-10 font-bold">Dados pessoais fornecidos pelo titular</h2>
+        <h2 class="mb-5 mt-10 font-bold">Dados pessoais fornecidos pelo titular</h2>
 
         <p class="text-justify">Nome (podendo ser completo, ou não). E-mail, com a finalidade de enviarmos atualizações, conteúdos, publicidade e entrar em contato. Telefone, com a finalidade de enviarmos atualizações, conteúdos, publicidade e entrar em contato.</p>
 
