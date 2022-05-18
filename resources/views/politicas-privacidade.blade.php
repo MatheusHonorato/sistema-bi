@@ -3,9 +3,9 @@
 
   <div class="container max-w-xl mx-auto flex items-start flex flex-col">
     <div class="p-10 bg-white">
-        <h1 class="mt-10 font-bold">Politicas de privacidade</h1>
-        <h2>Conforme  a Lei Geral de Proteção de Dados.</h2>
-        <h2 class="mb-5">Rebrax Assessoria - Serviços Técnicos Especializados</h2>
+        <h1 class="mt-10 font-bold text-center">Politicas de privacidade</h1>
+        <h2 class="text-center">Conforme  a Lei Geral de Proteção de Dados.</h2>
+        <h2 class="mb-5 text-center">Rebrax Assessoria - Serviços Técnicos Especializados</h2>
 
         <p class="mb-5 text-justify">Privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários/clientes.</p>
 
