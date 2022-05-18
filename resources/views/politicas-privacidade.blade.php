@@ -3,7 +3,9 @@
 
   <div class="container max-w-xl mx-auto flex items-start flex flex-col">
     <div class="p-10 bg-white">
-        <h1 class="mb-5 mt-10 font-bold">Politicas de privacidade</h1>
+        <h1 class="mt-10 font-bold">Politicas de privacidade</h1>
+        <h2>Conforme  a Lei Geral de Proteção de Dados.</h2>
+        <h2 class="mb-5">Rebrax Assessoria - Serviços Técnicos Especializados</h2>
 
         <p class="mb-5 text-justify">Privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários/clientes.</p>
 
@@ -16,15 +18,15 @@
         <h2 class="mb-5 mt-10 font-bold">Quais dados coletamos sobre você e para qual finalidade?</h2>
 
         <p class="text-justify">Nosso site e/ou através de formulários digitais, coletamos e utilizamos alguns dados pessoais seus, de forma a viabilizar a prestação de serviços e aprimorar a experiência de uso.</p>
-    
+
         <h2 class="mb-5 mt-10 font-bold">Dados pessoais fornecidos pelo titular</h2>
 
         <p class="text-justify">Nome (podendo ser completo, ou não). E-mail, com a finalidade de enviarmos atualizações, conteúdos, publicidade e entrar em contato. Telefone, com a finalidade de enviarmos atualizações, conteúdos, publicidade e entrar em contato.</p>
 
         <h2 class="mb-5 mt-10 font-bold">Como coletamos os seus dados?</h2>
-        
+
         <p class="text-justify">Nesse sentido, a coleta dos seus dados pessoais ocorre da seguinte forma: Através de um formulário de cadastro disponibilizado no site www.rebrax.com e/ou através de formulários digitais.</p>
-      
+
         <h2 class="mb-5 mt-10 font-bold">Consentimento</h2>
         <p class="text-justify">É a partir do seu consentimento que tratamos os seus dados pessoais. O consentimento é a
           manifestação livre, informada e inequívoca pela qual você autoriza a Rebrax Assessoria a
