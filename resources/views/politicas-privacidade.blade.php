@@ -66,11 +66,7 @@ previstos em lei.</li>
           <li>Informar-se sobre a possibilidade de não fornecer seu consentimento e sobre as consequências da negativa.</li>
         </ul>
         <h2 class="mb-5 mt-10 font-bold">Como você pode exercer seus direitos de titular?</h2>
-        <p class="text-justify">Para exercer seus direitos de titular, você deve entrar em contato com a Rebrax
-Assessoria através dos seguintes meios disponíveis: contato@rebrax.com .  
-De forma a garantir a sua correta identificação como titular dos dados pessoais objeto da
-solicitação, é possível que solicitemos documentos ou demais comprovações que possam
-comprovar sua identidade. Nessa hipótese, você será informado previamente.</p>
+        <p class="text-justify">Para exercer seus direitos de titular, você deve entrar em contato com a Rebrax Assessoria através dos seguintes meios disponíveis: contato@rebrax.com. De forma a garantir a sua correta identificação como titular dos dados pessoais objeto da solicitação, é possível que solicitemos documentos ou demais comprovações que possam comprovar sua identidade. Nessa hipótese, você será informado previamente.</p>
 
         <h2 class="mb-5 mt-10 font-bold">Como e por quanto tempo seus dados serão armazenados?</h2>
         <p class="text-justify">Seus dados pessoais coletados pela Rebrax Assessoria serão utilizados e armazenados
