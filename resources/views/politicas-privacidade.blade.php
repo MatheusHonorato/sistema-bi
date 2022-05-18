@@ -168,7 +168,7 @@ previstos em lei.</li>
           </p>
 
           <ol class="list-decimal pl-5 mt-5">
-            <li>Se você usa o <a class="underline"  href="https://support.microsoft.com/pt-br/windows/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank">Internet Explorer</a>.</li>
+            <li>Se você usa o <a class="underline" href="https://support.microsoft.com/pt-br/windows/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank">Internet Explorer</a>.</li>
             <li>Se você usa o <a class="underline" href="https://support.mozilla.org/pt-BR/kb/gerencie-configuracoes-de-armazenamento-local-de-s" target="_blank">Firefox</a>.</li>
             <li>Se você usa o <a class="underline" href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank">Safari</a>.</li>
             <li>Se você usa o <a class="underline" href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;oco=1&amp;hl=pt-BR" target="_blank">Google Chrome</a>.</li>
