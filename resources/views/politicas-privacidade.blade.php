@@ -5,7 +5,7 @@
     <div class="p-10 bg-white">
         <h1 class="mt-10 font-bold text-center">Politicas de privacidade</h1>
         <h2 class="text-center">Conforme  a Lei Geral de Proteção de Dados.</h2>
-        <h2 class="mb-5 text-center">Rebrax Assessoria - Serviços Técnicos Especializados</h2>
+        <h2 class="mb-5 text-center"><span class="font-bold">Rebrax Assessoria</span> - Serviços Técnicos Especializados</h2>
 
         <p class="mb-5 text-justify">Privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários/clientes.</p>
 
@@ -172,12 +172,12 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
           </p>
 
           <ol class="list-decimal pl-5 mt-5">
-            <li>Se você usa o Internet Explorer.</li>
-            <li>Se você usa o Firefox.</li>
-            <li>Se você usa o Safari.</li>
-            <li>Se você usa o Google Chrome.</li>
-            <li>Se você usa o Microsoft Edge.</li>
-            <li>Se você usa o Opera.</li>
+            <li>Se você usa o <a  href="https://support.microsoft.com/pt-br/windows/excluir-e-gerenciar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank">Internet Explorer</a>.</li>
+            <li>Se você usa o <a href="https://support.mozilla.org/pt-BR/kb/gerencie-configuracoes-de-armazenamento-local-de-s" target="_blank">Firefox</a>.</li>
+            <li>Se você usa o <a href="https://support.apple.com/pt-br/guide/safari/sfri11471/mac" target="_blank">Safari</a>.</li>
+            <li>Se você usa o <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;oco=1&amp;hl=pt-BR" target="_blank">Google Chrome</a>.</li>
+            <li>Se você usa o <a href="https://support.microsoft.com/pt-br/help/4027947/microsoft-edge-delete-cookies" target="_blank">Microsoft Edge</a>.</li>
+            <li>Se você usa o <a href="https://help.opera.com/en/latest/web-preferences/" target="_blank">Opera</a>.</li>
           </ol>
 
           <h2 class="mb-5 mt-10 font-bold">Alteração desta Política de Privacidade</h2>
