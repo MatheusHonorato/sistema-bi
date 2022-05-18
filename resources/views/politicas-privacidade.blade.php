@@ -251,7 +251,7 @@ comprovar sua identidade. Nessa hipótese, você será informado previamente.</p
 
           <h2 class="mb-5 mt-10 font-bold">Encarregado de Proteção de Dados</h2>
 
-          <p class="text-justify">A Rebrax Assessoria disponibiliza os seguintes meios para que você possa entrar em contato conosco para exercer seus direitos de titular: contato@rebrax.com .</p>
+          <p class="text-justify">A Rebrax Assessoria disponibiliza os seguintes meios para que você possa entrar em contato conosco para exercer seus direitos de titular: contato@rebrax.com.</p>
 
           <p class="text-justify">Caso tenha dúvidas sobre esta Política de Privacidade ou sobre os dados pessoais que
           tratamos, você pode entrar em contato.</p>
