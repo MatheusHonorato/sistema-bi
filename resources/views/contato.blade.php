@@ -152,7 +152,7 @@
 <script>
   const tel = document.getElementById('phone') // Seletor do campo de telefone
 
-  tel.addEventListener('keypress', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
+  tel.addEventListener('keyup', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
   tel.addEventListener('change', (e) => mascaraTelefone(e.target.value)) // Dispara quando autocompletado o campo
 
   const mascaraTelefone = (valor) => {
